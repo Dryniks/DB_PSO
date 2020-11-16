@@ -25,22 +25,10 @@ namespace WindowsFormsApp1.Admin.People
         {
             var context = new PSOConnect();
 
-            var missingPeople = from people in context.people
-                                join missingPeoples in context.missingPeople on people.idPeople equals missingPeoples.idPeople
-                                select new
-                                {
-                                    Id = people.idPeople,
-                                    Family = people.family,
-                                    Name = people.name,
-                                    MiddleName = people.middleName,
-                                    DateOfBirth = people.dateOfBirth,
-                                    DateOfLoss = missingPeoples.dateOfLoss,
-                                    LastLocation = missingPeoples.lastLocation,
-                                    SpecialSign = missingPeoples.specialSign,
-                                };
+            var missingPeople = context.GetPeopleData();
 
             foreach (var people in missingPeople)
-                ListInfo.Items.Add($"{people.Id}-ФАМИЛИЯ: {people.Family} ИМЯ: {people.Name} ОТЧЕСТВО: {people.MiddleName} ДАТА РОЖДЕНИЯ: {people.DateOfBirth.Value.ToLongDateString()}\n ДАТА ПРОПАЖИ: {people.DateOfLoss.Value.ToLongDateString()} ПОСЛЕДНЕЕ МЕСТО: {people.LastLocation} ОПИСАНИЕ: {people.SpecialSign}");
+                ListInfo.Items.Add($"{people.idPeople}-ФАМИЛИЯ: {people.family} ИМЯ: {people.name} ОТЧЕСТВО: {people.middleName} ДАТА РОЖДЕНИЯ: {people.dateOfBirth.Value.ToLongDateString()}\n ДАТА ПРОПАЖИ: {people.dateOfLoss.Value.ToLongDateString()} ПОСЛЕДНЕЕ МЕСТО: {people.lastLocation} ОПИСАНИЕ: {people.specialSign}");
         }
 
         private void AddMissingPeopleButtonClick(object sender, EventArgs e)

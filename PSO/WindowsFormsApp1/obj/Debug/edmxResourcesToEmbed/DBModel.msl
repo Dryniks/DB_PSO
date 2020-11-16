@@ -138,5 +138,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOModel.GetPeopleData" FunctionImportName="GetPeopleData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.GetPeopleData_Result">
+          <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="dateOfLoss" ColumnName="dateOfLoss" />
+          <ScalarProperty Name="lastLocation" ColumnName="lastLocation" />
+          <ScalarProperty Name="specialSign" ColumnName="specialSign" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

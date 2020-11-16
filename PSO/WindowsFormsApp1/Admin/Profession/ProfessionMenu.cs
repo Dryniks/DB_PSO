@@ -25,19 +25,10 @@ namespace WindowsFormsApp1.Admin.Profession
         {
             var context = new PSOConnect();
 
-            var equipments = from equipment in context.equipment
-                             join profession in context.profession on equipment.idProfession equals profession.idProfession
-                             select new
-                             {
-                                 Id = equipment.idEquipment,
-                                 Type = equipment.type,
-                                 EquipmentName = equipment.equipmentName,
-                                 Description = equipment.description,
-                                 Profession = profession.position
-                             };
+            var equipments = context.GetEquipmentData();
 
             foreach (var equipment in equipments)
-                ListInfo.Items.Add($"{equipment.Id}-ТИП: {equipment.Type} НАЗВАНИЕ: {equipment.EquipmentName} ОПИСАНИЕ: {equipment.Description} ПРОФЕССИИ: {equipment.Profession}");
+                ListInfo.Items.Add($"{equipment.idEquipment}-ТИП: {equipment.type} НАЗВАНИЕ: {equipment.equipmentName} ОПИСАНИЕ: {equipment.description} ПРОФЕССИИ: {equipment.position}");
         }
 
         private void AddEquipmentButtonClick(object sender, EventArgs e)

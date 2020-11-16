@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="PSOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="GetPeopleData_Result">
+    <Property Name="idPeople" Type="Int32" Nullable="false" />
+    <Property Name="family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirth" Type="DateTime" />
+    <Property Name="dateOfLoss" Type="DateTime" />
+    <Property Name="lastLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="specialSign" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </ComplexType>
   <EntityType Name="coordinator">
     <Key>
       <PropertyRef Name="idTeam" />
@@ -354,5 +364,6 @@
       <End Role="teamPosition" EntitySet="teamPosition" />
       <End Role="user" EntitySet="user" />
     </AssociationSet>
+    <FunctionImport Name="GetPeopleData" IsComposable="true" ReturnType="Collection(PSOModel.GetPeopleData_Result)" />
   </EntityContainer>
 </Schema>

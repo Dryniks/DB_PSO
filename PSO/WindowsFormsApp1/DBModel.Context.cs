@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class PSOConnect : DbContext
     {
@@ -38,5 +40,23 @@ namespace WindowsFormsApp1
         public virtual DbSet<team> team { get; set; }
         public virtual DbSet<teamPosition> teamPosition { get; set; }
         public virtual DbSet<user> user { get; set; }
+    
+        [DbFunction("PSOConnect", "GetDisasterData")]
+        public virtual IQueryable<GetDisasterData_Result> GetDisasterData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetDisasterData_Result>("[PSOConnect].[GetDisasterData]()");
+        }
+    
+        [DbFunction("PSOConnect", "GetEquipmentData")]
+        public virtual IQueryable<GetEquipmentData_Result> GetEquipmentData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetEquipmentData_Result>("[PSOConnect].[GetEquipmentData]()");
+        }
+    
+        [DbFunction("PSOConnect", "GetPeopleData")]
+        public virtual IQueryable<GetPeopleData_Result> GetPeopleData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetPeopleData_Result>("[PSOConnect].[GetPeopleData]()");
+        }
     }
 }

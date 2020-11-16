@@ -273,6 +273,49 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetDisasterData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="idReason" Type="int" Nullable="false" />
+                <Property Name="reason" Type="nvarchar" MaxLength="50" />
+                <Property Name="typeReason" Type="nvarchar" MaxLength="50" />
+                <Property Name="city" Type="nvarchar" MaxLength="50" />
+                <Property Name="country" Type="nvarchar" MaxLength="50" />
+                <Property Name="date" Type="date" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="GetEquipmentData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="idEquipment" Type="int" Nullable="false" />
+                <Property Name="description" Type="nvarchar" MaxLength="200" />
+                <Property Name="type" Type="nvarchar" MaxLength="50" />
+                <Property Name="equipmentName" Type="nvarchar" MaxLength="100" />
+                <Property Name="position" Type="nvarchar" MaxLength="50" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="GetPeopleData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="idPeople" Type="int" Nullable="false" />
+                <Property Name="family" Type="nvarchar" MaxLength="50" />
+                <Property Name="name" Type="nvarchar" MaxLength="50" />
+                <Property Name="middleName" Type="nvarchar" MaxLength="50" />
+                <Property Name="dateOfBirth" Type="date" />
+                <Property Name="dateOfLoss" Type="date" />
+                <Property Name="lastLocation" Type="nvarchar" MaxLength="200" />
+                <Property Name="specialSign" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <EntityContainer Name="Хранилище PSOModelContainer">
           <EntitySet Name="coordinator" EntityType="Self.coordinator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
@@ -341,6 +384,31 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PSOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="GetDisasterData_Result">
+          <Property Name="idReason" Type="Int32" Nullable="false" />
+          <Property Name="reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typeReason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" />
+        </ComplexType>
+        <ComplexType Name="GetEquipmentData_Result">
+          <Property Name="idEquipment" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="equipmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="GetPeopleData_Result">
+          <Property Name="idPeople" Type="Int32" Nullable="false" />
+          <Property Name="family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateOfBirth" Type="DateTime" />
+          <Property Name="dateOfLoss" Type="DateTime" />
+          <Property Name="lastLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="specialSign" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
         <EntityType Name="coordinator">
           <Key>
             <PropertyRef Name="idTeam" />
@@ -695,6 +763,9 @@
             <End Role="teamPosition" EntitySet="teamPosition" />
             <End Role="user" EntitySet="user" />
           </AssociationSet>
+          <FunctionImport Name="GetDisasterData" IsComposable="true" ReturnType="Collection(PSOModel.GetDisasterData_Result)" />
+          <FunctionImport Name="GetEquipmentData" IsComposable="true" ReturnType="Collection(PSOModel.GetEquipmentData_Result)" />
+          <FunctionImport Name="GetPeopleData" IsComposable="true" ReturnType="Collection(PSOModel.GetPeopleData_Result)" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -839,6 +910,43 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionName="Хранилище PSOModel.GetDisasterData" FunctionImportName="GetDisasterData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PSOModel.GetDisasterData_Result">
+                <ScalarProperty Name="idReason" ColumnName="idReason" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="typeReason" ColumnName="typeReason" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="Хранилище PSOModel.GetEquipmentData" FunctionImportName="GetEquipmentData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PSOModel.GetEquipmentData_Result">
+                <ScalarProperty Name="idEquipment" ColumnName="idEquipment" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="equipmentName" ColumnName="equipmentName" />
+                <ScalarProperty Name="position" ColumnName="position" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="Хранилище PSOModel.GetPeopleData" FunctionImportName="GetPeopleData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PSOModel.GetPeopleData_Result">
+                <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+                <ScalarProperty Name="family" ColumnName="family" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+                <ScalarProperty Name="dateOfLoss" ColumnName="dateOfLoss" />
+                <ScalarProperty Name="lastLocation" ColumnName="lastLocation" />
+                <ScalarProperty Name="specialSign" ColumnName="specialSign" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

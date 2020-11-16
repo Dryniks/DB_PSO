@@ -25,20 +25,10 @@ namespace WindowsFormsApp1.Admin.Disaster
         {
             var context = new PSOConnect();
 
-            var disasters = from reason in context.reason
-                            join disaster in context.disaster on reason.idDisaster equals disaster.idDisaster
-                            select new
-                            {
-                                Id = reason.idReason,
-                                Type = reason.typeReason,
-                                Reason = reason.reason1,
-                                County = disaster.country,
-                                City = disaster.city,
-                                Date = disaster.date,
-                            };
+            var disasters = context.GetDisasterData();
 
             foreach (var disaster in disasters)
-                ListInfo.Items.Add($"{disaster.Id}-ТИП: {disaster.Type} ПРИЧИНА: {disaster.Reason} СТРАНА: {disaster.County} ГОРОД: {disaster.City} ДАТА: {disaster.Date.Value.ToLongDateString()}");
+                ListInfo.Items.Add($"{disaster.idReason}-ТИП: {disaster.typeReason} ПРИЧИНА: {disaster.reason} СТРАНА: {disaster.country} ГОРОД: {disaster.city} ДАТА: {disaster.date.Value.ToLongDateString()}");
         }
 
         private void AddDisasterButtonClick(object sender, EventArgs e)

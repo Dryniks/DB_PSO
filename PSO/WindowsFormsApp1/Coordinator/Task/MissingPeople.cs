@@ -31,35 +31,23 @@ namespace WindowsFormsApp1.Coordinator.Task
             var context = new PSOConnect();
             var team = context.team.FirstOrDefault(teams => teams.idTeam == Login.CurrentUser.idTeam);
 
-            var missingPeople = from people in context.people
-                                join missingPeoples in context.missingPeople on people.idPeople equals missingPeoples.idPeople
-                                select new
-                                {
-                                    Id = people.idPeople,
-                                    Family = people.family,
-                                    Name = people.name,
-                                    MiddleName = people.middleName,
-                                    DateOfBirth = people.dateOfBirth,
-                                    DateOfLoss = missingPeoples.dateOfLoss,
-                                    LastLocation = missingPeoples.lastLocation,
-                                    SpecialSign = missingPeoples.specialSign,
-                                };
+            var missingPeople = context.GetPeopleData();
 
             foreach (var people in missingPeople)
             {
-                SelectMissingPeopleField.Items.Add($"{people.Id}-ФАМИЛИЯ: {people.Family} ИМЯ: {people.Name} ОТЧЕСТВО: {people.MiddleName} ДАТА РОЖДЕНИЯ: {people.DateOfBirth.Value.ToLongDateString()}\n ДАТА ПРОПАЖИ: {people.DateOfLoss.Value.ToLongDateString()} ПОСЛЕДНЕЕ МЕСТО: {people.LastLocation} ОПИСАНИЕ: {people.SpecialSign}");
+                SelectMissingPeopleField.Items.Add($"{people.idPeople}-ФАМИЛИЯ: {people.family} ИМЯ: {people.name} ОТЧЕСТВО: {people.middleName} ДАТА РОЖДЕНИЯ: {people.dateOfBirth.Value.ToLongDateString()}\n ДАТА ПРОПАЖИ: {people.dateOfLoss.Value.ToLongDateString()} ПОСЛЕДНЕЕ МЕСТО: {people.lastLocation} ОПИСАНИЕ: {people.specialSign}");
 
-                if (team.idPeople == null || team.idPeople != people.Id)
+                if (team.idPeople == null || team.idPeople != people.idPeople)
                     continue;
 
                 SelectMissingPeopleField.SelectedItem = SelectMissingPeopleField.Items[SelectMissingPeopleField.Items.Count - 1];
 
-                IdPeopleText.Text = people.Id.ToString();
-                FioResultText.Text = $"{people.Family} {people.Name} {people.MiddleName}";
-                DateOfBirthResultText.Text = people.DateOfBirth.Value.ToShortDateString();
-                SpecialSignResultText.Text = people.SpecialSign;
-                LastLocationResultText.Text = people.LastLocation;
-                DateOfLossResultText.Text = people.DateOfLoss.Value.ToShortDateString();
+                IdPeopleText.Text = people.idPeople.ToString();
+                FioResultText.Text = $"{people.family} {people.name} {people.middleName}";
+                DateOfBirthResultText.Text = people.dateOfBirth.Value.ToShortDateString();
+                SpecialSignResultText.Text = people.specialSign;
+                LastLocationResultText.Text = people.lastLocation;
+                DateOfLossResultText.Text = people.dateOfLoss.Value.ToShortDateString();
             }
 
             IdPeopleText.Hide();

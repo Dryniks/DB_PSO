@@ -268,6 +268,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="GetPeopleData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="idPeople" Type="int" Nullable="false" />
+          <Property Name="family" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="middleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateOfBirth" Type="date" />
+          <Property Name="dateOfLoss" Type="date" />
+          <Property Name="lastLocation" Type="nvarchar" MaxLength="200" />
+          <Property Name="specialSign" Type="nvarchar" MaxLength="200" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
   <EntityContainer Name="Хранилище PSOModelContainer">
     <EntitySet Name="coordinator" EntityType="Self.coordinator" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
