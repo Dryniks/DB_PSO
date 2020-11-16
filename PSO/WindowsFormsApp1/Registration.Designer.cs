@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.LoginField = new System.Windows.Forms.TextBox();
             this.LoginText = new System.Windows.Forms.Label();
             this.PasswordField = new System.Windows.Forms.TextBox();
@@ -52,7 +53,9 @@
             // 
             // LoginField
             // 
+            this.LoginField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.LoginField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginField.ForeColor = System.Drawing.Color.White;
             this.LoginField.Location = new System.Drawing.Point(222, 14);
             this.LoginField.MaxLength = 50;
             this.LoginField.Name = "LoginField";
@@ -63,7 +66,9 @@
             // LoginText
             // 
             this.LoginText.AutoSize = true;
+            this.LoginText.BackColor = System.Drawing.Color.Transparent;
             this.LoginText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.LoginText.Location = new System.Drawing.Point(13, 16);
             this.LoginText.Name = "LoginText";
             this.LoginText.Size = new System.Drawing.Size(65, 22);
@@ -72,7 +77,9 @@
             // 
             // PasswordField
             // 
+            this.PasswordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.PasswordField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordField.ForeColor = System.Drawing.Color.White;
             this.PasswordField.Location = new System.Drawing.Point(222, 63);
             this.PasswordField.MaxLength = 50;
             this.PasswordField.Name = "PasswordField";
@@ -83,7 +90,9 @@
             // PasswordText
             // 
             this.PasswordText.AutoSize = true;
+            this.PasswordText.BackColor = System.Drawing.Color.Transparent;
             this.PasswordText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.PasswordText.Location = new System.Drawing.Point(13, 63);
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.Size = new System.Drawing.Size(75, 22);
@@ -92,7 +101,9 @@
             // 
             // ReturnPasswordField
             // 
+            this.ReturnPasswordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ReturnPasswordField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReturnPasswordField.ForeColor = System.Drawing.Color.White;
             this.ReturnPasswordField.Location = new System.Drawing.Point(222, 113);
             this.ReturnPasswordField.MaxLength = 50;
             this.ReturnPasswordField.Name = "ReturnPasswordField";
@@ -103,7 +114,9 @@
             // ReturnPasswordText
             // 
             this.ReturnPasswordText.AutoSize = true;
+            this.ReturnPasswordText.BackColor = System.Drawing.Color.Transparent;
             this.ReturnPasswordText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReturnPasswordText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.ReturnPasswordText.Location = new System.Drawing.Point(12, 115);
             this.ReturnPasswordText.Name = "ReturnPasswordText";
             this.ReturnPasswordText.Size = new System.Drawing.Size(177, 22);
@@ -112,7 +125,9 @@
             // 
             // FamilyField
             // 
+            this.FamilyField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.FamilyField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FamilyField.ForeColor = System.Drawing.Color.White;
             this.FamilyField.Location = new System.Drawing.Point(222, 167);
             this.FamilyField.MaxLength = 50;
             this.FamilyField.Name = "FamilyField";
@@ -123,7 +138,9 @@
             // FamilyText
             // 
             this.FamilyText.AutoSize = true;
+            this.FamilyText.BackColor = System.Drawing.Color.Transparent;
             this.FamilyText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FamilyText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.FamilyText.Location = new System.Drawing.Point(13, 169);
             this.FamilyText.Name = "FamilyText";
             this.FamilyText.Size = new System.Drawing.Size(93, 22);
@@ -132,7 +149,9 @@
             // 
             // NameField
             // 
+            this.NameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.NameField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameField.ForeColor = System.Drawing.Color.White;
             this.NameField.Location = new System.Drawing.Point(222, 217);
             this.NameField.MaxLength = 50;
             this.NameField.Name = "NameField";
@@ -143,7 +162,9 @@
             // NameText
             // 
             this.NameText.AutoSize = true;
+            this.NameText.BackColor = System.Drawing.Color.Transparent;
             this.NameText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.NameText.Location = new System.Drawing.Point(13, 219);
             this.NameText.Name = "NameText";
             this.NameText.Size = new System.Drawing.Size(47, 22);
@@ -152,7 +173,9 @@
             // 
             // MiddleNameField
             // 
+            this.MiddleNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.MiddleNameField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MiddleNameField.ForeColor = System.Drawing.Color.White;
             this.MiddleNameField.Location = new System.Drawing.Point(222, 272);
             this.MiddleNameField.MaxLength = 50;
             this.MiddleNameField.Name = "MiddleNameField";
@@ -163,7 +186,9 @@
             // MiddleNameText
             // 
             this.MiddleNameText.AutoSize = true;
+            this.MiddleNameText.BackColor = System.Drawing.Color.Transparent;
             this.MiddleNameText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MiddleNameText.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.MiddleNameText.Location = new System.Drawing.Point(14, 274);
             this.MiddleNameText.Name = "MiddleNameText";
             this.MiddleNameText.Size = new System.Drawing.Size(92, 22);
@@ -173,7 +198,9 @@
             // Position
             // 
             this.Position.AutoSize = true;
+            this.Position.BackColor = System.Drawing.Color.Transparent;
             this.Position.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Position.ForeColor = System.Drawing.Color.White;
             this.Position.Location = new System.Drawing.Point(13, 332);
             this.Position.Name = "Position";
             this.Position.Size = new System.Drawing.Size(146, 22);
@@ -182,7 +209,9 @@
             // 
             // ProfessionField
             // 
+            this.ProfessionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ProfessionField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic);
+            this.ProfessionField.ForeColor = System.Drawing.Color.White;
             this.ProfessionField.FormattingEnabled = true;
             this.ProfessionField.Location = new System.Drawing.Point(222, 330);
             this.ProfessionField.Name = "ProfessionField";
@@ -193,30 +222,37 @@
             // 
             // RegistationButton
             // 
+            this.RegistationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.RegistationButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegistationButton.ForeColor = System.Drawing.Color.White;
             this.RegistationButton.Location = new System.Drawing.Point(12, 421);
             this.RegistationButton.Name = "RegistationButton";
             this.RegistationButton.Size = new System.Drawing.Size(211, 53);
             this.RegistationButton.TabIndex = 17;
             this.RegistationButton.Text = "Зарегистрироваться";
-            this.RegistationButton.UseVisualStyleBackColor = true;
+            this.RegistationButton.UseVisualStyleBackColor = false;
             this.RegistationButton.Click += new System.EventHandler(this.RegistationButtonClick);
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(334, 421);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(211, 53);
             this.BackButton.TabIndex = 18;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // AdminPasswordText
             // 
             this.AdminPasswordText.AutoSize = true;
+            this.AdminPasswordText.BackColor = System.Drawing.Color.Transparent;
             this.AdminPasswordText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdminPasswordText.ForeColor = System.Drawing.Color.White;
             this.AdminPasswordText.Location = new System.Drawing.Point(13, 379);
             this.AdminPasswordText.Name = "AdminPasswordText";
             this.AdminPasswordText.Size = new System.Drawing.Size(145, 22);
@@ -225,8 +261,10 @@
             // 
             // AdminPasswordField
             // 
+            this.AdminPasswordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AdminPasswordField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AdminPasswordField.Location = new System.Drawing.Point(222, 377);
+            this.AdminPasswordField.ForeColor = System.Drawing.Color.White;
+            this.AdminPasswordField.Location = new System.Drawing.Point(221, 379);
             this.AdminPasswordField.MaxLength = 50;
             this.AdminPasswordField.Name = "AdminPasswordField";
             this.AdminPasswordField.Size = new System.Drawing.Size(323, 29);
@@ -235,8 +273,10 @@
             // 
             // CoordinatorPasswordField
             // 
+            this.CoordinatorPasswordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CoordinatorPasswordField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CoordinatorPasswordField.Location = new System.Drawing.Point(222, 377);
+            this.CoordinatorPasswordField.ForeColor = System.Drawing.Color.White;
+            this.CoordinatorPasswordField.Location = new System.Drawing.Point(222, 379);
             this.CoordinatorPasswordField.MaxLength = 50;
             this.CoordinatorPasswordField.Name = "CoordinatorPasswordField";
             this.CoordinatorPasswordField.Size = new System.Drawing.Size(323, 29);
@@ -246,7 +286,9 @@
             // CoordinatorPasswordText
             // 
             this.CoordinatorPasswordText.AutoSize = true;
+            this.CoordinatorPasswordText.BackColor = System.Drawing.Color.Transparent;
             this.CoordinatorPasswordText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CoordinatorPasswordText.ForeColor = System.Drawing.Color.White;
             this.CoordinatorPasswordText.Location = new System.Drawing.Point(13, 379);
             this.CoordinatorPasswordText.Name = "CoordinatorPasswordText";
             this.CoordinatorPasswordText.Size = new System.Drawing.Size(202, 22);
@@ -257,6 +299,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(559, 486);
             this.Controls.Add(this.CoordinatorPasswordField);
             this.Controls.Add(this.CoordinatorPasswordText);
@@ -278,7 +322,9 @@
             this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.LoginField);
             this.Controls.Add(this.LoginText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация пользователя";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistrationFormClosed);
             this.ResumeLayout(false);

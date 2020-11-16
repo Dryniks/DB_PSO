@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Disaster));
             this.ReasonText = new System.Windows.Forms.Label();
             this.CountyResultText = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
@@ -42,7 +43,9 @@
             // ReasonText
             // 
             this.ReasonText.AutoSize = true;
+            this.ReasonText.BackColor = System.Drawing.Color.Transparent;
             this.ReasonText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReasonText.ForeColor = System.Drawing.Color.White;
             this.ReasonText.Location = new System.Drawing.Point(565, 159);
             this.ReasonText.Name = "ReasonText";
             this.ReasonText.Size = new System.Drawing.Size(327, 22);
@@ -52,7 +55,9 @@
             // CountyResultText
             // 
             this.CountyResultText.AutoSize = true;
+            this.CountyResultText.BackColor = System.Drawing.Color.Transparent;
             this.CountyResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CountyResultText.ForeColor = System.Drawing.Color.White;
             this.CountyResultText.Location = new System.Drawing.Point(314, 68);
             this.CountyResultText.Name = "CountyResultText";
             this.CountyResultText.Size = new System.Drawing.Size(327, 22);
@@ -61,18 +66,22 @@
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(569, 405);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(165, 33);
             this.BackButton.TabIndex = 125;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // ListInfo
             // 
+            this.ListInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ListInfo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ListInfo.ForeColor = System.Drawing.Color.White;
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 200);
             this.ListInfo.Name = "ListInfo";
@@ -84,7 +93,9 @@
             // CountryText
             // 
             this.CountryText.AutoSize = true;
+            this.CountryText.BackColor = System.Drawing.Color.Transparent;
             this.CountryText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CountryText.ForeColor = System.Drawing.Color.White;
             this.CountryText.Location = new System.Drawing.Point(12, 68);
             this.CountryText.Name = "CountryText";
             this.CountryText.Size = new System.Drawing.Size(74, 22);
@@ -94,7 +105,9 @@
             // CityResultText
             // 
             this.CityResultText.AutoSize = true;
+            this.CityResultText.BackColor = System.Drawing.Color.Transparent;
             this.CityResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CityResultText.ForeColor = System.Drawing.Color.White;
             this.CityResultText.Location = new System.Drawing.Point(314, 127);
             this.CityResultText.Name = "CityResultText";
             this.CityResultText.Size = new System.Drawing.Size(327, 22);
@@ -104,7 +117,9 @@
             // DateResultText
             // 
             this.DateResultText.AutoSize = true;
+            this.DateResultText.BackColor = System.Drawing.Color.Transparent;
             this.DateResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateResultText.ForeColor = System.Drawing.Color.White;
             this.DateResultText.Location = new System.Drawing.Point(314, 13);
             this.DateResultText.Name = "DateResultText";
             this.DateResultText.Size = new System.Drawing.Size(327, 22);
@@ -114,7 +129,9 @@
             // CityText
             // 
             this.CityText.AutoSize = true;
+            this.CityText.BackColor = System.Drawing.Color.Transparent;
             this.CityText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CityText.ForeColor = System.Drawing.Color.White;
             this.CityText.Location = new System.Drawing.Point(9, 127);
             this.CityText.Name = "CityText";
             this.CityText.Size = new System.Drawing.Size(59, 22);
@@ -124,7 +141,9 @@
             // DateText
             // 
             this.DateText.AutoSize = true;
+            this.DateText.BackColor = System.Drawing.Color.Transparent;
             this.DateText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateText.ForeColor = System.Drawing.Color.White;
             this.DateText.Location = new System.Drawing.Point(9, 13);
             this.DateText.Name = "DateText";
             this.DateText.Size = new System.Drawing.Size(163, 22);
@@ -135,6 +154,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 450);
             this.Controls.Add(this.ReasonText);
             this.Controls.Add(this.CountyResultText);
@@ -145,7 +166,9 @@
             this.Controls.Add(this.DateResultText);
             this.Controls.Add(this.CityText);
             this.Controls.Add(this.DateText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Disaster";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Катастрофа";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisasterFormClosed);
             this.ResumeLayout(false);

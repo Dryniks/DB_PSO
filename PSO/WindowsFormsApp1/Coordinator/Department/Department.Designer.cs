@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Department));
             this.MainDepartmentResultText = new System.Windows.Forms.Label();
             this.DepartmentResultText = new System.Windows.Forms.Label();
             this.RegionResultText = new System.Windows.Forms.Label();
@@ -45,7 +46,9 @@
             // MainDepartmentResultText
             // 
             this.MainDepartmentResultText.AutoSize = true;
+            this.MainDepartmentResultText.BackColor = System.Drawing.Color.Transparent;
             this.MainDepartmentResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainDepartmentResultText.ForeColor = System.Drawing.Color.White;
             this.MainDepartmentResultText.Location = new System.Drawing.Point(313, 123);
             this.MainDepartmentResultText.Name = "MainDepartmentResultText";
             this.MainDepartmentResultText.Size = new System.Drawing.Size(327, 22);
@@ -55,7 +58,9 @@
             // DepartmentResultText
             // 
             this.DepartmentResultText.AutoSize = true;
+            this.DepartmentResultText.BackColor = System.Drawing.Color.Transparent;
             this.DepartmentResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DepartmentResultText.ForeColor = System.Drawing.Color.White;
             this.DepartmentResultText.Location = new System.Drawing.Point(313, 64);
             this.DepartmentResultText.Name = "DepartmentResultText";
             this.DepartmentResultText.Size = new System.Drawing.Size(327, 22);
@@ -65,7 +70,9 @@
             // RegionResultText
             // 
             this.RegionResultText.AutoSize = true;
+            this.RegionResultText.BackColor = System.Drawing.Color.Transparent;
             this.RegionResultText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegionResultText.ForeColor = System.Drawing.Color.White;
             this.RegionResultText.Location = new System.Drawing.Point(313, 9);
             this.RegionResultText.Name = "RegionResultText";
             this.RegionResultText.Size = new System.Drawing.Size(327, 22);
@@ -75,7 +82,9 @@
             // MainDepartmentText
             // 
             this.MainDepartmentText.AutoSize = true;
+            this.MainDepartmentText.BackColor = System.Drawing.Color.Transparent;
             this.MainDepartmentText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainDepartmentText.ForeColor = System.Drawing.Color.White;
             this.MainDepartmentText.Location = new System.Drawing.Point(8, 123);
             this.MainDepartmentText.Name = "MainDepartmentText";
             this.MainDepartmentText.Size = new System.Drawing.Size(271, 22);
@@ -85,7 +94,9 @@
             // DepartmentText
             // 
             this.DepartmentText.AutoSize = true;
+            this.DepartmentText.BackColor = System.Drawing.Color.Transparent;
             this.DepartmentText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DepartmentText.ForeColor = System.Drawing.Color.White;
             this.DepartmentText.Location = new System.Drawing.Point(8, 64);
             this.DepartmentText.Name = "DepartmentText";
             this.DepartmentText.Size = new System.Drawing.Size(187, 22);
@@ -95,7 +106,9 @@
             // RegionText
             // 
             this.RegionText.AutoSize = true;
+            this.RegionText.BackColor = System.Drawing.Color.Transparent;
             this.RegionText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegionText.ForeColor = System.Drawing.Color.White;
             this.RegionText.Location = new System.Drawing.Point(8, 9);
             this.RegionText.Name = "RegionText";
             this.RegionText.Size = new System.Drawing.Size(136, 22);
@@ -104,40 +117,48 @@
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(1140, 177);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(165, 53);
             this.BackButton.TabIndex = 84;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // EditButton
             // 
+            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditButton.ForeColor = System.Drawing.Color.White;
             this.EditButton.Location = new System.Drawing.Point(551, 177);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(165, 53);
             this.EditButton.TabIndex = 83;
             this.EditButton.Text = "Редактировать";
-            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditDepartmentButtonClick);
             // 
             // SaveButton
             // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.SaveButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
             this.SaveButton.Location = new System.Drawing.Point(12, 177);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(165, 53);
             this.SaveButton.TabIndex = 82;
             this.SaveButton.Text = "Сохранить";
-            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveDepartmentButtonClick);
             // 
             // SelectRegionField
             // 
+            this.SelectRegionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.SelectRegionField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic);
+            this.SelectRegionField.ForeColor = System.Drawing.Color.White;
             this.SelectRegionField.FormattingEnabled = true;
             this.SelectRegionField.Location = new System.Drawing.Point(201, 64);
             this.SelectRegionField.Name = "SelectRegionField";
@@ -148,7 +169,9 @@
             // SelectRegionText
             // 
             this.SelectRegionText.AutoSize = true;
+            this.SelectRegionText.BackColor = System.Drawing.Color.Transparent;
             this.SelectRegionText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectRegionText.ForeColor = System.Drawing.Color.White;
             this.SelectRegionText.Location = new System.Drawing.Point(12, 64);
             this.SelectRegionText.Name = "SelectRegionText";
             this.SelectRegionText.Size = new System.Drawing.Size(161, 22);
@@ -158,7 +181,9 @@
             // NoFoundRegionText
             // 
             this.NoFoundRegionText.AutoSize = true;
+            this.NoFoundRegionText.BackColor = System.Drawing.Color.Transparent;
             this.NoFoundRegionText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NoFoundRegionText.ForeColor = System.Drawing.Color.White;
             this.NoFoundRegionText.Location = new System.Drawing.Point(313, 66);
             this.NoFoundRegionText.Name = "NoFoundRegionText";
             this.NoFoundRegionText.Size = new System.Drawing.Size(220, 22);
@@ -169,6 +194,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1317, 242);
             this.Controls.Add(this.NoFoundRegionText);
             this.Controls.Add(this.SelectRegionField);
@@ -182,7 +209,9 @@
             this.Controls.Add(this.MainDepartmentText);
             this.Controls.Add(this.DepartmentText);
             this.Controls.Add(this.RegionText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Department";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Департамент";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DepartmentFormClosed);
             this.ResumeLayout(false);

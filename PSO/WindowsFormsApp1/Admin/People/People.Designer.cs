@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(People));
             this.DateOfBirthField = new System.Windows.Forms.DateTimePicker();
             this.DateOfBitrhText = new System.Windows.Forms.Label();
             this.MiddleNameField = new System.Windows.Forms.TextBox();
@@ -62,7 +63,9 @@
             // DateOfBitrhText
             // 
             this.DateOfBitrhText.AutoSize = true;
+            this.DateOfBitrhText.BackColor = System.Drawing.Color.Transparent;
             this.DateOfBitrhText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateOfBitrhText.ForeColor = System.Drawing.Color.White;
             this.DateOfBitrhText.Location = new System.Drawing.Point(11, 175);
             this.DateOfBitrhText.Name = "DateOfBitrhText";
             this.DateOfBitrhText.Size = new System.Drawing.Size(141, 22);
@@ -71,7 +74,9 @@
             // 
             // MiddleNameField
             // 
+            this.MiddleNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.MiddleNameField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MiddleNameField.ForeColor = System.Drawing.Color.White;
             this.MiddleNameField.Location = new System.Drawing.Point(282, 118);
             this.MiddleNameField.MaxLength = 50;
             this.MiddleNameField.Name = "MiddleNameField";
@@ -82,7 +87,9 @@
             // MiddleNameText
             // 
             this.MiddleNameText.AutoSize = true;
+            this.MiddleNameText.BackColor = System.Drawing.Color.Transparent;
             this.MiddleNameText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MiddleNameText.ForeColor = System.Drawing.Color.White;
             this.MiddleNameText.Location = new System.Drawing.Point(11, 125);
             this.MiddleNameText.Name = "MiddleNameText";
             this.MiddleNameText.Size = new System.Drawing.Size(92, 22);
@@ -91,7 +98,9 @@
             // 
             // NameField
             // 
+            this.NameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.NameField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameField.ForeColor = System.Drawing.Color.White;
             this.NameField.Location = new System.Drawing.Point(282, 64);
             this.NameField.MaxLength = 50;
             this.NameField.Name = "NameField";
@@ -102,7 +111,9 @@
             // NameText
             // 
             this.NameText.AutoSize = true;
+            this.NameText.BackColor = System.Drawing.Color.Transparent;
             this.NameText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameText.ForeColor = System.Drawing.Color.White;
             this.NameText.Location = new System.Drawing.Point(10, 71);
             this.NameText.Name = "NameText";
             this.NameText.Size = new System.Drawing.Size(47, 22);
@@ -111,7 +122,9 @@
             // 
             // FamilyField
             // 
+            this.FamilyField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.FamilyField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FamilyField.ForeColor = System.Drawing.Color.White;
             this.FamilyField.Location = new System.Drawing.Point(282, 12);
             this.FamilyField.MaxLength = 50;
             this.FamilyField.Name = "FamilyField";
@@ -122,7 +135,9 @@
             // FamilyText
             // 
             this.FamilyText.AutoSize = true;
+            this.FamilyText.BackColor = System.Drawing.Color.Transparent;
             this.FamilyText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FamilyText.ForeColor = System.Drawing.Color.White;
             this.FamilyText.Location = new System.Drawing.Point(11, 19);
             this.FamilyText.Name = "FamilyText";
             this.FamilyText.Size = new System.Drawing.Size(93, 22);
@@ -144,7 +159,9 @@
             // DateOfLossText
             // 
             this.DateOfLossText.AutoSize = true;
+            this.DateOfLossText.BackColor = System.Drawing.Color.Transparent;
             this.DateOfLossText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateOfLossText.ForeColor = System.Drawing.Color.White;
             this.DateOfLossText.Location = new System.Drawing.Point(11, 329);
             this.DateOfLossText.Name = "DateOfLossText";
             this.DateOfLossText.Size = new System.Drawing.Size(133, 22);
@@ -153,7 +170,9 @@
             // 
             // SpecialSignField
             // 
+            this.SpecialSignField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.SpecialSignField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpecialSignField.ForeColor = System.Drawing.Color.White;
             this.SpecialSignField.Location = new System.Drawing.Point(282, 272);
             this.SpecialSignField.MaxLength = 50;
             this.SpecialSignField.Name = "SpecialSignField";
@@ -164,7 +183,9 @@
             // SpecialSignText
             // 
             this.SpecialSignText.AutoSize = true;
+            this.SpecialSignText.BackColor = System.Drawing.Color.Transparent;
             this.SpecialSignText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpecialSignText.ForeColor = System.Drawing.Color.White;
             this.SpecialSignText.Location = new System.Drawing.Point(11, 279);
             this.SpecialSignText.Name = "SpecialSignText";
             this.SpecialSignText.Size = new System.Drawing.Size(97, 22);
@@ -173,7 +194,9 @@
             // 
             // LastLocationField
             // 
+            this.LastLocationField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.LastLocationField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LastLocationField.ForeColor = System.Drawing.Color.White;
             this.LastLocationField.Location = new System.Drawing.Point(282, 218);
             this.LastLocationField.MaxLength = 50;
             this.LastLocationField.Name = "LastLocationField";
@@ -184,7 +207,9 @@
             // LastLocationText
             // 
             this.LastLocationText.AutoSize = true;
+            this.LastLocationText.BackColor = System.Drawing.Color.Transparent;
             this.LastLocationText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LastLocationText.ForeColor = System.Drawing.Color.White;
             this.LastLocationText.Location = new System.Drawing.Point(10, 225);
             this.LastLocationText.Name = "LastLocationText";
             this.LastLocationText.Size = new System.Drawing.Size(252, 22);
@@ -193,29 +218,34 @@
             // 
             // EditMissingPeopleButton
             // 
+            this.EditMissingPeopleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditMissingPeopleButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditMissingPeopleButton.ForeColor = System.Drawing.Color.White;
             this.EditMissingPeopleButton.Location = new System.Drawing.Point(12, 385);
             this.EditMissingPeopleButton.Name = "EditMissingPeopleButton";
             this.EditMissingPeopleButton.Size = new System.Drawing.Size(211, 53);
             this.EditMissingPeopleButton.TabIndex = 57;
             this.EditMissingPeopleButton.Text = "Редактировать";
-            this.EditMissingPeopleButton.UseVisualStyleBackColor = true;
+            this.EditMissingPeopleButton.UseVisualStyleBackColor = false;
             this.EditMissingPeopleButton.Click += new System.EventHandler(this.EditMissingPeopleButtonClick);
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(394, 385);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(211, 53);
             this.BackButton.TabIndex = 56;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // AddMissingPeopleButton
             // 
             this.AddMissingPeopleButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddMissingPeopleButton.ForeColor = System.Drawing.Color.White;
             this.AddMissingPeopleButton.Location = new System.Drawing.Point(12, 385);
             this.AddMissingPeopleButton.Name = "AddMissingPeopleButton";
             this.AddMissingPeopleButton.Size = new System.Drawing.Size(211, 53);
@@ -228,6 +258,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(622, 450);
             this.Controls.Add(this.EditMissingPeopleButton);
             this.Controls.Add(this.BackButton);
@@ -246,7 +278,9 @@
             this.Controls.Add(this.NameText);
             this.Controls.Add(this.FamilyField);
             this.Controls.Add(this.FamilyText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "People";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "People";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PeopleFormClosed);
             this.ResumeLayout(false);

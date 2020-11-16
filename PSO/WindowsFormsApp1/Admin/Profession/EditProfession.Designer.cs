@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfession));
             this.BackButton = new System.Windows.Forms.Button();
             this.TypeEqupmentField = new System.Windows.Forms.ComboBox();
             this.DescriptionEqupmentField = new System.Windows.Forms.TextBox();
@@ -42,18 +43,22 @@
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(561, 204);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(160, 52);
             this.BackButton.TabIndex = 88;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // TypeEqupmentField
             // 
+            this.TypeEqupmentField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.TypeEqupmentField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic);
+            this.TypeEqupmentField.ForeColor = System.Drawing.Color.White;
             this.TypeEqupmentField.FormattingEnabled = true;
             this.TypeEqupmentField.Location = new System.Drawing.Point(283, 99);
             this.TypeEqupmentField.Name = "TypeEqupmentField";
@@ -63,7 +68,9 @@
             // 
             // DescriptionEqupmentField
             // 
+            this.DescriptionEqupmentField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.DescriptionEqupmentField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DescriptionEqupmentField.ForeColor = System.Drawing.Color.White;
             this.DescriptionEqupmentField.Location = new System.Drawing.Point(283, 145);
             this.DescriptionEqupmentField.MaxLength = 50;
             this.DescriptionEqupmentField.Name = "DescriptionEqupmentField";
@@ -74,7 +81,9 @@
             // DescriptionEqupmentText
             // 
             this.DescriptionEqupmentText.AutoSize = true;
+            this.DescriptionEqupmentText.BackColor = System.Drawing.Color.Transparent;
             this.DescriptionEqupmentText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DescriptionEqupmentText.ForeColor = System.Drawing.Color.White;
             this.DescriptionEqupmentText.Location = new System.Drawing.Point(11, 152);
             this.DescriptionEqupmentText.Name = "DescriptionEqupmentText";
             this.DescriptionEqupmentText.Size = new System.Drawing.Size(222, 22);
@@ -84,7 +93,9 @@
             // TypeEquipmentText
             // 
             this.TypeEquipmentText.AutoSize = true;
+            this.TypeEquipmentText.BackColor = System.Drawing.Color.Transparent;
             this.TypeEquipmentText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TypeEquipmentText.ForeColor = System.Drawing.Color.White;
             this.TypeEquipmentText.Location = new System.Drawing.Point(13, 106);
             this.TypeEquipmentText.Name = "TypeEquipmentText";
             this.TypeEquipmentText.Size = new System.Drawing.Size(170, 22);
@@ -93,7 +104,9 @@
             // 
             // NameEquipmentField
             // 
+            this.NameEquipmentField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.NameEquipmentField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameEquipmentField.ForeColor = System.Drawing.Color.White;
             this.NameEquipmentField.Location = new System.Drawing.Point(283, 53);
             this.NameEquipmentField.MaxLength = 50;
             this.NameEquipmentField.Name = "NameEquipmentField";
@@ -103,7 +116,9 @@
             // NameEquipmentText
             // 
             this.NameEquipmentText.AutoSize = true;
+            this.NameEquipmentText.BackColor = System.Drawing.Color.Transparent;
             this.NameEquipmentText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameEquipmentText.ForeColor = System.Drawing.Color.White;
             this.NameEquipmentText.Location = new System.Drawing.Point(13, 60);
             this.NameEquipmentText.Name = "NameEquipmentText";
             this.NameEquipmentText.Size = new System.Drawing.Size(218, 22);
@@ -112,7 +127,9 @@
             // 
             // ProfessionField
             // 
+            this.ProfessionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ProfessionField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProfessionField.ForeColor = System.Drawing.Color.White;
             this.ProfessionField.Location = new System.Drawing.Point(283, 9);
             this.ProfessionField.MaxLength = 50;
             this.ProfessionField.Name = "ProfessionField";
@@ -123,7 +140,9 @@
             // ProfessionText
             // 
             this.ProfessionText.AutoSize = true;
+            this.ProfessionText.BackColor = System.Drawing.Color.Transparent;
             this.ProfessionText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProfessionText.ForeColor = System.Drawing.Color.White;
             this.ProfessionText.Location = new System.Drawing.Point(12, 16);
             this.ProfessionText.Name = "ProfessionText";
             this.ProfessionText.Size = new System.Drawing.Size(105, 22);
@@ -132,19 +151,23 @@
             // 
             // EditProfessionButton
             // 
+            this.EditProfessionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditProfessionButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditProfessionButton.ForeColor = System.Drawing.Color.White;
             this.EditProfessionButton.Location = new System.Drawing.Point(44, 204);
             this.EditProfessionButton.Name = "EditProfessionButton";
             this.EditProfessionButton.Size = new System.Drawing.Size(160, 52);
             this.EditProfessionButton.TabIndex = 77;
             this.EditProfessionButton.Text = "Редактировать";
-            this.EditProfessionButton.UseVisualStyleBackColor = true;
+            this.EditProfessionButton.UseVisualStyleBackColor = false;
             this.EditProfessionButton.Click += new System.EventHandler(this.EditProfessionButtonClick);
             // 
             // EditProfession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 266);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.TypeEqupmentField);
@@ -156,7 +179,9 @@
             this.Controls.Add(this.ProfessionField);
             this.Controls.Add(this.ProfessionText);
             this.Controls.Add(this.EditProfessionButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditProfession";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактировать оборудование";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProfessionFormClosed);
             this.ResumeLayout(false);

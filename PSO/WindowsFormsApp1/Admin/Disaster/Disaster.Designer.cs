@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Disaster));
             this.BackButton = new System.Windows.Forms.Button();
             this.AddDisasterButton = new System.Windows.Forms.Button();
             this.DateText = new System.Windows.Forms.Label();
@@ -45,18 +46,21 @@
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(334, 282);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(211, 53);
             this.BackButton.TabIndex = 38;
             this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButtonClick);
             // 
             // AddDisasterButton
             // 
             this.AddDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddDisasterButton.ForeColor = System.Drawing.Color.White;
             this.AddDisasterButton.Location = new System.Drawing.Point(12, 282);
             this.AddDisasterButton.Name = "AddDisasterButton";
             this.AddDisasterButton.Size = new System.Drawing.Size(211, 53);
@@ -68,7 +72,9 @@
             // DateText
             // 
             this.DateText.AutoSize = true;
+            this.DateText.BackColor = System.Drawing.Color.Transparent;
             this.DateText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateText.ForeColor = System.Drawing.Color.White;
             this.DateText.Location = new System.Drawing.Point(13, 217);
             this.DateText.Name = "DateText";
             this.DateText.Size = new System.Drawing.Size(52, 22);
@@ -77,7 +83,9 @@
             // 
             // CityField
             // 
+            this.CityField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CityField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CityField.ForeColor = System.Drawing.Color.White;
             this.CityField.Location = new System.Drawing.Point(222, 160);
             this.CityField.MaxLength = 50;
             this.CityField.Name = "CityField";
@@ -88,7 +96,9 @@
             // CityText
             // 
             this.CityText.AutoSize = true;
+            this.CityText.BackColor = System.Drawing.Color.Transparent;
             this.CityText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CityText.ForeColor = System.Drawing.Color.White;
             this.CityText.Location = new System.Drawing.Point(13, 167);
             this.CityText.Name = "CityText";
             this.CityText.Size = new System.Drawing.Size(59, 22);
@@ -97,7 +107,9 @@
             // 
             // CountryField
             // 
+            this.CountryField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CountryField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CountryField.ForeColor = System.Drawing.Color.White;
             this.CountryField.Location = new System.Drawing.Point(222, 106);
             this.CountryField.MaxLength = 50;
             this.CountryField.Name = "CountryField";
@@ -108,7 +120,9 @@
             // CountryText
             // 
             this.CountryText.AutoSize = true;
+            this.CountryText.BackColor = System.Drawing.Color.Transparent;
             this.CountryText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CountryText.ForeColor = System.Drawing.Color.White;
             this.CountryText.Location = new System.Drawing.Point(12, 113);
             this.CountryText.Name = "CountryText";
             this.CountryText.Size = new System.Drawing.Size(74, 22);
@@ -117,7 +131,9 @@
             // 
             // ReasonField
             // 
+            this.ReasonField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ReasonField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReasonField.ForeColor = System.Drawing.Color.White;
             this.ReasonField.Location = new System.Drawing.Point(222, 54);
             this.ReasonField.MaxLength = 50;
             this.ReasonField.Name = "ReasonField";
@@ -128,7 +144,9 @@
             // ReasonText
             // 
             this.ReasonText.AutoSize = true;
+            this.ReasonText.BackColor = System.Drawing.Color.Transparent;
             this.ReasonText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReasonText.ForeColor = System.Drawing.Color.White;
             this.ReasonText.Location = new System.Drawing.Point(13, 61);
             this.ReasonText.Name = "ReasonText";
             this.ReasonText.Size = new System.Drawing.Size(88, 22);
@@ -138,7 +156,9 @@
             // TypeText
             // 
             this.TypeText.AutoSize = true;
+            this.TypeText.BackColor = System.Drawing.Color.Transparent;
             this.TypeText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TypeText.ForeColor = System.Drawing.Color.White;
             this.TypeText.Location = new System.Drawing.Point(13, 14);
             this.TypeText.Name = "TypeText";
             this.TypeText.Size = new System.Drawing.Size(45, 22);
@@ -147,7 +167,9 @@
             // 
             // TypeField
             // 
+            this.TypeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.TypeField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic);
+            this.TypeField.ForeColor = System.Drawing.Color.White;
             this.TypeField.FormattingEnabled = true;
             this.TypeField.Location = new System.Drawing.Point(222, 7);
             this.TypeField.Name = "TypeField";
@@ -157,6 +179,8 @@
             // 
             // DateField
             // 
+            this.DateField.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.DateField.CalendarTitleForeColor = System.Drawing.Color.White;
             this.DateField.CustomFormat = "dd.MM.yyyy";
             this.DateField.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic);
             this.DateField.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -169,19 +193,23 @@
             // 
             // EditDisasterButton
             // 
+            this.EditDisasterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditDisasterButton.ForeColor = System.Drawing.Color.White;
             this.EditDisasterButton.Location = new System.Drawing.Point(12, 282);
             this.EditDisasterButton.Name = "EditDisasterButton";
             this.EditDisasterButton.Size = new System.Drawing.Size(211, 53);
             this.EditDisasterButton.TabIndex = 41;
             this.EditDisasterButton.Text = "Редактировать";
-            this.EditDisasterButton.UseVisualStyleBackColor = true;
+            this.EditDisasterButton.UseVisualStyleBackColor = false;
             this.EditDisasterButton.Click += new System.EventHandler(this.EditDisasterButtonClick);
             // 
             // Disaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(558, 344);
             this.Controls.Add(this.EditDisasterButton);
             this.Controls.Add(this.DateField);
@@ -196,7 +224,9 @@
             this.Controls.Add(this.ReasonField);
             this.Controls.Add(this.ReasonText);
             this.Controls.Add(this.TypeText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Disaster";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Информация о катастрофе";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisasterFormClosed);
             this.ResumeLayout(false);
