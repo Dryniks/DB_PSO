@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3642AB67-D73B-4762-8F55-4BFC33C77539}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Departamet\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Departamet\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Departamet\DepartmentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Departamet\DepartmentMenu.Designer.cs">
+      <DependentUpon>DepartmentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Disaster\Disaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Disaster\Disaster.Designer.cs">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Disaster\DisasterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Disaster\DisasterMenu.Designer.cs">
+      <DependentUpon>DisasterMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\People\People.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\People\People.Designer.cs">
+      <DependentUpon>People.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\People\PeopleMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\People\PeopleMenu.Designer.cs">
+      <DependentUpon>PeopleMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profession\EditProfession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Profession\EditProfession.Designer.cs">
+      <DependentUpon>EditProfession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profession\Profession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Profession\Profession.Designer.cs">
+      <DependentUpon>Profession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profession\ProfessionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Profession\ProfessionMenu.Designer.cs">
+      <DependentUpon>ProfessionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coordinator.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\CoordinatorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\CoordinatorMenu.Designer.cs">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Department\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Department\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Task\Disaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Task\Disaster.Designer.cs">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Task\MissingPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Task\MissingPeople.Designer.cs">
+      <DependentUpon>MissingPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Task\TaskMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Task\TaskMenu.Designer.cs">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Team\TeamMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Team\TeamMenu.Designer.cs">
+      <DependentUpon>TeamMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="department.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="disaster.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="equipment.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainDepartment.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="missingPeople.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\OtherUsersMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\OtherUsersMenu.Designer.cs">
+      <DependentUpon>OtherUsersMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\Task\Disaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\Task\Disaster.Designer.cs">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\Task\MissingPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\Task\MissingPeople.Designer.cs">
+      <DependentUpon>MissingPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\Task\TaskMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\Task\TaskMenu.Designer.cs">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUsers\Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsers\Team.Designer.cs">
+      <DependentUpon>Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="people.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="profession.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reason.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="region.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="team.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="teamPosition.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Departamet\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Departamet\DepartmentMenu.resx">
+      <DependentUpon>DepartmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Disaster\Disaster.resx">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Disaster\DisasterMenu.resx">
+      <DependentUpon>DisasterMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\People\People.resx">
+      <DependentUpon>People.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\People\PeopleMenu.resx">
+      <DependentUpon>PeopleMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Profession\EditProfession.resx">
+      <DependentUpon>EditProfession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Profession\Profession.resx">
+      <DependentUpon>Profession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Profession\ProfessionMenu.resx">
+      <DependentUpon>ProfessionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\CoordinatorMenu.resx">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Department\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Task\Disaster.resx">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Task\MissingPeople.resx">
+      <DependentUpon>MissingPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Task\TaskMenu.resx">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Team\TeamMenu.resx">
+      <DependentUpon>TeamMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\OtherUsersMenu.resx">
+      <DependentUpon>OtherUsersMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\Task\Disaster.resx">
+      <DependentUpon>Disaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\Task\MissingPeople.resx">
+      <DependentUpon>MissingPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\Task\TaskMenu.resx">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsers\Team.resx">
+      <DependentUpon>Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBModel.edmx.diagram">
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fa80dee2961469584f9ceb0cce78b73" Name="Diagram1">
+        <EntityTypeShape EntityType="PSOModel.coordinator" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.department" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.disaster" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.equipment" Width="1.5" PointX="7.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.mainDepartment" Width="1.5" PointX="1.5" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.missingPeople" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.people" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.profession" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.reason" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.region" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.team" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.teamPosition" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSOModel.user" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="PSOModel.FK_coordinator_region" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_TeamPosition_coordinator" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_department_mainDepartment" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_region_department" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_Reason_Disaster" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_team_Disaster" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_equipment_profession" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_People_missingPeople" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_team_missingPeople" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_user_profession" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_TeamPosition_team" ManuallyRouted="false" />
+        <AssociationConnector Association="PSOModel.FK_user_TeamPosition" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

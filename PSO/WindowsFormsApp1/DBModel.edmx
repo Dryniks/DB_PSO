@@ -1,0 +1,865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PSOModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="coordinator">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="int" Nullable="false" />
+          <Property Name="idRegion" Type="int" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="idDepartment" />
+          </Key>
+          <Property Name="idDepartment" Type="int" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="150" />
+          <Property Name="idMainDepartment" Type="int" />
+        </EntityType>
+        <EntityType Name="disaster">
+          <Key>
+            <PropertyRef Name="idDisaster" />
+          </Key>
+          <Property Name="idDisaster" Type="int" Nullable="false" />
+          <Property Name="date" Type="date" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="equipment">
+          <Key>
+            <PropertyRef Name="idEquipment" />
+          </Key>
+          <Property Name="idEquipment" Type="int" Nullable="false" />
+          <Property Name="idProfession" Type="int" />
+          <Property Name="equipmentName" Type="nvarchar" MaxLength="100" />
+          <Property Name="type" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="mainDepartment">
+          <Key>
+            <PropertyRef Name="idMainDepartment" />
+          </Key>
+          <Property Name="idMainDepartment" Type="int" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="missingPeople">
+          <Key>
+            <PropertyRef Name="idPeople" />
+          </Key>
+          <Property Name="idPeople" Type="int" Nullable="false" />
+          <Property Name="dateOfLoss" Type="date" />
+          <Property Name="lastLocation" Type="nvarchar" MaxLength="200" />
+          <Property Name="specialSign" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="people">
+          <Key>
+            <PropertyRef Name="idPeople" />
+          </Key>
+          <Property Name="idPeople" Type="int" Nullable="false" />
+          <Property Name="family" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="middleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateOfBirth" Type="date" />
+        </EntityType>
+        <EntityType Name="profession">
+          <Key>
+            <PropertyRef Name="idProfession" />
+          </Key>
+          <Property Name="idProfession" Type="int" Nullable="false" />
+          <Property Name="position" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="reason">
+          <Key>
+            <PropertyRef Name="idReason" />
+          </Key>
+          <Property Name="idReason" Type="int" Nullable="false" />
+          <Property Name="typeReason" Type="nvarchar" MaxLength="50" />
+          <Property Name="reason" Type="nvarchar" MaxLength="50" />
+          <Property Name="idDisaster" Type="int" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="idRegion" />
+          </Key>
+          <Property Name="idRegion" Type="int" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="150" />
+          <Property Name="idDepartment" Type="int" />
+        </EntityType>
+        <EntityType Name="team">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="int" Nullable="false" />
+          <Property Name="teamName" Type="nvarchar" MaxLength="50" />
+          <Property Name="idDisaster" Type="int" />
+          <Property Name="idPeople" Type="int" />
+        </EntityType>
+        <EntityType Name="teamPosition">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="int" Nullable="false" />
+          <Property Name="seniorLifeguard" Type="int" />
+          <Property Name="doctor" Type="int" />
+          <Property Name="paramedic" Type="int" />
+          <Property Name="driver" Type="int" />
+          <Property Name="pyrotechnist" Type="int" />
+          <Property Name="gasWelder" Type="int" />
+          <Property Name="craneOperator" Type="int" />
+          <Property Name="scubaDriver" Type="int" />
+          <Property Name="hydraulicEquipmentTechnician" Type="int" />
+          <Property Name="scout" Type="int" />
+          <Property Name="electrician" Type="int" />
+          <Property Name="rescuer" Type="int" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="idUser" />
+          </Key>
+          <Property Name="idUser" Type="int" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="family" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="middleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="idProfession" Type="int" />
+          <Property Name="idTeam" Type="int" />
+        </EntityType>
+        <Association Name="FK_coordinator_region">
+          <End Role="region" Type="Self.region" Multiplicity="0..1" />
+          <End Role="coordinator" Type="Self.coordinator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="region">
+              <PropertyRef Name="idRegion" />
+            </Principal>
+            <Dependent Role="coordinator">
+              <PropertyRef Name="idRegion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_department_mainDepartment">
+          <End Role="mainDepartment" Type="Self.mainDepartment" Multiplicity="0..1" />
+          <End Role="department" Type="Self.department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mainDepartment">
+              <PropertyRef Name="idMainDepartment" />
+            </Principal>
+            <Dependent Role="department">
+              <PropertyRef Name="idMainDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_equipment_profession">
+          <End Role="profession" Type="Self.profession" Multiplicity="0..1" />
+          <End Role="equipment" Type="Self.equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profession">
+              <PropertyRef Name="idProfession" />
+            </Principal>
+            <Dependent Role="equipment">
+              <PropertyRef Name="idProfession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_People_missingPeople">
+          <End Role="missingPeople" Type="Self.missingPeople" Multiplicity="1" />
+          <End Role="people" Type="Self.people" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="missingPeople">
+              <PropertyRef Name="idPeople" />
+            </Principal>
+            <Dependent Role="people">
+              <PropertyRef Name="idPeople" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reason_Disaster">
+          <End Role="disaster" Type="Self.disaster" Multiplicity="0..1" />
+          <End Role="reason" Type="Self.reason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="disaster">
+              <PropertyRef Name="idDisaster" />
+            </Principal>
+            <Dependent Role="reason">
+              <PropertyRef Name="idDisaster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_region_department">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="region" Type="Self.region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="idDepartment" />
+            </Principal>
+            <Dependent Role="region">
+              <PropertyRef Name="idDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_team_Disaster">
+          <End Role="disaster" Type="Self.disaster" Multiplicity="0..1" />
+          <End Role="team" Type="Self.team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="disaster">
+              <PropertyRef Name="idDisaster" />
+            </Principal>
+            <Dependent Role="team">
+              <PropertyRef Name="idDisaster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_team_missingPeople">
+          <End Role="missingPeople" Type="Self.missingPeople" Multiplicity="0..1" />
+          <End Role="team" Type="Self.team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="missingPeople">
+              <PropertyRef Name="idPeople" />
+            </Principal>
+            <Dependent Role="team">
+              <PropertyRef Name="idPeople" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamPosition_coordinator">
+          <End Role="coordinator" Type="Self.coordinator" Multiplicity="1" />
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coordinator">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamPosition_team">
+          <End Role="team" Type="Self.team" Multiplicity="1" />
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="team">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_profession">
+          <End Role="profession" Type="Self.profession" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profession">
+              <PropertyRef Name="idProfession" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="idProfession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_TeamPosition">
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище PSOModelContainer">
+          <EntitySet Name="coordinator" EntityType="Self.coordinator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="disaster" EntityType="Self.disaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="equipment" EntityType="Self.equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mainDepartment" EntityType="Self.mainDepartment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="missingPeople" EntityType="Self.missingPeople" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="people" EntityType="Self.people" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profession" EntityType="Self.profession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reason" EntityType="Self.reason" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="region" EntityType="Self.region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="team" EntityType="Self.team" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="teamPosition" EntityType="Self.teamPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_coordinator_region" Association="Self.FK_coordinator_region">
+            <End Role="region" EntitySet="region" />
+            <End Role="coordinator" EntitySet="coordinator" />
+          </AssociationSet>
+          <AssociationSet Name="FK_department_mainDepartment" Association="Self.FK_department_mainDepartment">
+            <End Role="mainDepartment" EntitySet="mainDepartment" />
+            <End Role="department" EntitySet="department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_equipment_profession" Association="Self.FK_equipment_profession">
+            <End Role="profession" EntitySet="profession" />
+            <End Role="equipment" EntitySet="equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_People_missingPeople" Association="Self.FK_People_missingPeople">
+            <End Role="missingPeople" EntitySet="missingPeople" />
+            <End Role="people" EntitySet="people" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reason_Disaster" Association="Self.FK_Reason_Disaster">
+            <End Role="disaster" EntitySet="disaster" />
+            <End Role="reason" EntitySet="reason" />
+          </AssociationSet>
+          <AssociationSet Name="FK_region_department" Association="Self.FK_region_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="region" EntitySet="region" />
+          </AssociationSet>
+          <AssociationSet Name="FK_team_Disaster" Association="Self.FK_team_Disaster">
+            <End Role="disaster" EntitySet="disaster" />
+            <End Role="team" EntitySet="team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_team_missingPeople" Association="Self.FK_team_missingPeople">
+            <End Role="missingPeople" EntitySet="missingPeople" />
+            <End Role="team" EntitySet="team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamPosition_coordinator" Association="Self.FK_TeamPosition_coordinator">
+            <End Role="coordinator" EntitySet="coordinator" />
+            <End Role="teamPosition" EntitySet="teamPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamPosition_team" Association="Self.FK_TeamPosition_team">
+            <End Role="team" EntitySet="team" />
+            <End Role="teamPosition" EntitySet="teamPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_profession" Association="Self.FK_user_profession">
+            <End Role="profession" EntitySet="profession" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_TeamPosition" Association="Self.FK_user_TeamPosition">
+            <End Role="teamPosition" EntitySet="teamPosition" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PSOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="coordinator">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="Int32" Nullable="false" />
+          <Property Name="idRegion" Type="Int32" />
+          <NavigationProperty Name="region" Relationship="Self.FK_coordinator_region" FromRole="coordinator" ToRole="region" />
+          <NavigationProperty Name="teamPosition" Relationship="Self.FK_TeamPosition_coordinator" FromRole="coordinator" ToRole="teamPosition" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="idDepartment" />
+          </Key>
+          <Property Name="idDepartment" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="idMainDepartment" Type="Int32" />
+          <NavigationProperty Name="mainDepartment" Relationship="Self.FK_department_mainDepartment" FromRole="department" ToRole="mainDepartment" />
+          <NavigationProperty Name="region" Relationship="Self.FK_region_department" FromRole="department" ToRole="region" />
+        </EntityType>
+        <EntityType Name="disaster">
+          <Key>
+            <PropertyRef Name="idDisaster" />
+          </Key>
+          <Property Name="idDisaster" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="reason" Relationship="Self.FK_Reason_Disaster" FromRole="disaster" ToRole="reason" />
+          <NavigationProperty Name="team" Relationship="Self.FK_team_Disaster" FromRole="disaster" ToRole="team" />
+        </EntityType>
+        <EntityType Name="equipment">
+          <Key>
+            <PropertyRef Name="idEquipment" />
+          </Key>
+          <Property Name="idEquipment" Type="Int32" Nullable="false" />
+          <Property Name="idProfession" Type="Int32" />
+          <Property Name="equipmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="profession" Relationship="Self.FK_equipment_profession" FromRole="equipment" ToRole="profession" />
+        </EntityType>
+        <EntityType Name="mainDepartment">
+          <Key>
+            <PropertyRef Name="idMainDepartment" />
+          </Key>
+          <Property Name="idMainDepartment" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="department" Relationship="Self.FK_department_mainDepartment" FromRole="mainDepartment" ToRole="department" />
+        </EntityType>
+        <EntityType Name="missingPeople">
+          <Key>
+            <PropertyRef Name="idPeople" />
+          </Key>
+          <Property Name="idPeople" Type="Int32" Nullable="false" />
+          <Property Name="dateOfLoss" Type="DateTime" Precision="0" />
+          <Property Name="lastLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="specialSign" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="people" Relationship="Self.FK_People_missingPeople" FromRole="missingPeople" ToRole="people" />
+          <NavigationProperty Name="team" Relationship="Self.FK_team_missingPeople" FromRole="missingPeople" ToRole="team" />
+        </EntityType>
+        <EntityType Name="people">
+          <Key>
+            <PropertyRef Name="idPeople" />
+          </Key>
+          <Property Name="idPeople" Type="Int32" Nullable="false" />
+          <Property Name="family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateOfBirth" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="missingPeople" Relationship="Self.FK_People_missingPeople" FromRole="people" ToRole="missingPeople" />
+        </EntityType>
+        <EntityType Name="profession">
+          <Key>
+            <PropertyRef Name="idProfession" />
+          </Key>
+          <Property Name="idProfession" Type="Int32" Nullable="false" />
+          <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="equipment" Relationship="Self.FK_equipment_profession" FromRole="profession" ToRole="equipment" />
+          <NavigationProperty Name="user" Relationship="Self.FK_user_profession" FromRole="profession" ToRole="user" />
+        </EntityType>
+        <EntityType Name="reason">
+          <Key>
+            <PropertyRef Name="idReason" />
+          </Key>
+          <Property Name="idReason" Type="Int32" Nullable="false" />
+          <Property Name="typeReason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="reason1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idDisaster" Type="Int32" />
+          <NavigationProperty Name="disaster" Relationship="Self.FK_Reason_Disaster" FromRole="reason" ToRole="disaster" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="idRegion" />
+          </Key>
+          <Property Name="idRegion" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="idDepartment" Type="Int32" />
+          <NavigationProperty Name="coordinator" Relationship="Self.FK_coordinator_region" FromRole="region" ToRole="coordinator" />
+          <NavigationProperty Name="department" Relationship="Self.FK_region_department" FromRole="region" ToRole="department" />
+        </EntityType>
+        <EntityType Name="team">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="Int32" Nullable="false" />
+          <Property Name="teamName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idDisaster" Type="Int32" />
+          <Property Name="idPeople" Type="Int32" />
+          <NavigationProperty Name="disaster" Relationship="Self.FK_team_Disaster" FromRole="team" ToRole="disaster" />
+          <NavigationProperty Name="missingPeople" Relationship="Self.FK_team_missingPeople" FromRole="team" ToRole="missingPeople" />
+          <NavigationProperty Name="teamPosition" Relationship="Self.FK_TeamPosition_team" FromRole="team" ToRole="teamPosition" />
+        </EntityType>
+        <EntityType Name="teamPosition">
+          <Key>
+            <PropertyRef Name="idTeam" />
+          </Key>
+          <Property Name="idTeam" Type="Int32" Nullable="false" />
+          <Property Name="seniorLifeguard" Type="Int32" />
+          <Property Name="doctor" Type="Int32" />
+          <Property Name="paramedic" Type="Int32" />
+          <Property Name="driver" Type="Int32" />
+          <Property Name="pyrotechnist" Type="Int32" />
+          <Property Name="gasWelder" Type="Int32" />
+          <Property Name="craneOperator" Type="Int32" />
+          <Property Name="scubaDriver" Type="Int32" />
+          <Property Name="hydraulicEquipmentTechnician" Type="Int32" />
+          <Property Name="scout" Type="Int32" />
+          <Property Name="electrician" Type="Int32" />
+          <Property Name="rescuer" Type="Int32" />
+          <NavigationProperty Name="coordinator" Relationship="Self.FK_TeamPosition_coordinator" FromRole="teamPosition" ToRole="coordinator" />
+          <NavigationProperty Name="team" Relationship="Self.FK_TeamPosition_team" FromRole="teamPosition" ToRole="team" />
+          <NavigationProperty Name="user" Relationship="Self.FK_user_TeamPosition" FromRole="teamPosition" ToRole="user" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="idUser" />
+          </Key>
+          <Property Name="idUser" Type="Int32" Nullable="false" />
+          <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idProfession" Type="Int32" />
+          <Property Name="idTeam" Type="Int32" />
+          <NavigationProperty Name="profession" Relationship="Self.FK_user_profession" FromRole="user" ToRole="profession" />
+          <NavigationProperty Name="teamPosition" Relationship="Self.FK_user_TeamPosition" FromRole="user" ToRole="teamPosition" />
+        </EntityType>
+        <Association Name="FK_coordinator_region">
+          <End Role="region" Type="Self.region" Multiplicity="0..1" />
+          <End Role="coordinator" Type="Self.coordinator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="region">
+              <PropertyRef Name="idRegion" />
+            </Principal>
+            <Dependent Role="coordinator">
+              <PropertyRef Name="idRegion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamPosition_coordinator">
+          <End Role="coordinator" Type="Self.coordinator" Multiplicity="1" />
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coordinator">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_department_mainDepartment">
+          <End Role="mainDepartment" Type="Self.mainDepartment" Multiplicity="0..1" />
+          <End Role="department" Type="Self.department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mainDepartment">
+              <PropertyRef Name="idMainDepartment" />
+            </Principal>
+            <Dependent Role="department">
+              <PropertyRef Name="idMainDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_region_department">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="region" Type="Self.region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="idDepartment" />
+            </Principal>
+            <Dependent Role="region">
+              <PropertyRef Name="idDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reason_Disaster">
+          <End Role="disaster" Type="Self.disaster" Multiplicity="0..1" />
+          <End Role="reason" Type="Self.reason" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="disaster">
+              <PropertyRef Name="idDisaster" />
+            </Principal>
+            <Dependent Role="reason">
+              <PropertyRef Name="idDisaster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_team_Disaster">
+          <End Role="disaster" Type="Self.disaster" Multiplicity="0..1" />
+          <End Role="team" Type="Self.team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="disaster">
+              <PropertyRef Name="idDisaster" />
+            </Principal>
+            <Dependent Role="team">
+              <PropertyRef Name="idDisaster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_equipment_profession">
+          <End Role="profession" Type="Self.profession" Multiplicity="0..1" />
+          <End Role="equipment" Type="Self.equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profession">
+              <PropertyRef Name="idProfession" />
+            </Principal>
+            <Dependent Role="equipment">
+              <PropertyRef Name="idProfession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_People_missingPeople">
+          <End Role="missingPeople" Type="Self.missingPeople" Multiplicity="1" />
+          <End Role="people" Type="Self.people" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="missingPeople">
+              <PropertyRef Name="idPeople" />
+            </Principal>
+            <Dependent Role="people">
+              <PropertyRef Name="idPeople" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_team_missingPeople">
+          <End Role="missingPeople" Type="Self.missingPeople" Multiplicity="0..1" />
+          <End Role="team" Type="Self.team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="missingPeople">
+              <PropertyRef Name="idPeople" />
+            </Principal>
+            <Dependent Role="team">
+              <PropertyRef Name="idPeople" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_profession">
+          <End Role="profession" Type="Self.profession" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profession">
+              <PropertyRef Name="idProfession" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="idProfession" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeamPosition_team">
+          <End Role="team" Type="Self.team" Multiplicity="1" />
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="team">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_TeamPosition">
+          <End Role="teamPosition" Type="Self.teamPosition" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teamPosition">
+              <PropertyRef Name="idTeam" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="idTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PSOConnect" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="coordinator" EntityType="Self.coordinator" />
+          <EntitySet Name="department" EntityType="Self.department" />
+          <EntitySet Name="disaster" EntityType="Self.disaster" />
+          <EntitySet Name="equipment" EntityType="Self.equipment" />
+          <EntitySet Name="mainDepartment" EntityType="Self.mainDepartment" />
+          <EntitySet Name="missingPeople" EntityType="Self.missingPeople" />
+          <EntitySet Name="people" EntityType="Self.people" />
+          <EntitySet Name="profession" EntityType="Self.profession" />
+          <EntitySet Name="reason" EntityType="Self.reason" />
+          <EntitySet Name="region" EntityType="Self.region" />
+          <EntitySet Name="team" EntityType="Self.team" />
+          <EntitySet Name="teamPosition" EntityType="Self.teamPosition" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <AssociationSet Name="FK_coordinator_region" Association="Self.FK_coordinator_region">
+            <End Role="region" EntitySet="region" />
+            <End Role="coordinator" EntitySet="coordinator" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamPosition_coordinator" Association="Self.FK_TeamPosition_coordinator">
+            <End Role="coordinator" EntitySet="coordinator" />
+            <End Role="teamPosition" EntitySet="teamPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_department_mainDepartment" Association="Self.FK_department_mainDepartment">
+            <End Role="mainDepartment" EntitySet="mainDepartment" />
+            <End Role="department" EntitySet="department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_region_department" Association="Self.FK_region_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="region" EntitySet="region" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reason_Disaster" Association="Self.FK_Reason_Disaster">
+            <End Role="disaster" EntitySet="disaster" />
+            <End Role="reason" EntitySet="reason" />
+          </AssociationSet>
+          <AssociationSet Name="FK_team_Disaster" Association="Self.FK_team_Disaster">
+            <End Role="disaster" EntitySet="disaster" />
+            <End Role="team" EntitySet="team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_equipment_profession" Association="Self.FK_equipment_profession">
+            <End Role="profession" EntitySet="profession" />
+            <End Role="equipment" EntitySet="equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_People_missingPeople" Association="Self.FK_People_missingPeople">
+            <End Role="missingPeople" EntitySet="missingPeople" />
+            <End Role="people" EntitySet="people" />
+          </AssociationSet>
+          <AssociationSet Name="FK_team_missingPeople" Association="Self.FK_team_missingPeople">
+            <End Role="missingPeople" EntitySet="missingPeople" />
+            <End Role="team" EntitySet="team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_profession" Association="Self.FK_user_profession">
+            <End Role="profession" EntitySet="profession" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeamPosition_team" Association="Self.FK_TeamPosition_team">
+            <End Role="team" EntitySet="team" />
+            <End Role="teamPosition" EntitySet="teamPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_TeamPosition" Association="Self.FK_user_TeamPosition">
+            <End Role="teamPosition" EntitySet="teamPosition" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PSOModelContainer" CdmEntityContainer="PSOConnect">
+          <EntitySetMapping Name="coordinator">
+            <EntityTypeMapping TypeName="PSOModel.coordinator">
+              <MappingFragment StoreEntitySet="coordinator">
+                <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+                <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="department">
+            <EntityTypeMapping TypeName="PSOModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="idMainDepartment" ColumnName="idMainDepartment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="disaster">
+            <EntityTypeMapping TypeName="PSOModel.disaster">
+              <MappingFragment StoreEntitySet="disaster">
+                <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="city" ColumnName="city" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="equipment">
+            <EntityTypeMapping TypeName="PSOModel.equipment">
+              <MappingFragment StoreEntitySet="equipment">
+                <ScalarProperty Name="idEquipment" ColumnName="idEquipment" />
+                <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+                <ScalarProperty Name="equipmentName" ColumnName="equipmentName" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mainDepartment">
+            <EntityTypeMapping TypeName="PSOModel.mainDepartment">
+              <MappingFragment StoreEntitySet="mainDepartment">
+                <ScalarProperty Name="idMainDepartment" ColumnName="idMainDepartment" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="missingPeople">
+            <EntityTypeMapping TypeName="PSOModel.missingPeople">
+              <MappingFragment StoreEntitySet="missingPeople">
+                <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+                <ScalarProperty Name="dateOfLoss" ColumnName="dateOfLoss" />
+                <ScalarProperty Name="lastLocation" ColumnName="lastLocation" />
+                <ScalarProperty Name="specialSign" ColumnName="specialSign" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="people">
+            <EntityTypeMapping TypeName="PSOModel.people">
+              <MappingFragment StoreEntitySet="people">
+                <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+                <ScalarProperty Name="family" ColumnName="family" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profession">
+            <EntityTypeMapping TypeName="PSOModel.profession">
+              <MappingFragment StoreEntitySet="profession">
+                <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+                <ScalarProperty Name="position" ColumnName="position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reason">
+            <EntityTypeMapping TypeName="PSOModel.reason">
+              <MappingFragment StoreEntitySet="reason">
+                <ScalarProperty Name="idReason" ColumnName="idReason" />
+                <ScalarProperty Name="typeReason" ColumnName="typeReason" />
+                <ScalarProperty Name="reason1" ColumnName="reason" />
+                <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="region">
+            <EntityTypeMapping TypeName="PSOModel.region">
+              <MappingFragment StoreEntitySet="region">
+                <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="team">
+            <EntityTypeMapping TypeName="PSOModel.team">
+              <MappingFragment StoreEntitySet="team">
+                <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+                <ScalarProperty Name="teamName" ColumnName="teamName" />
+                <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+                <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="teamPosition">
+            <EntityTypeMapping TypeName="PSOModel.teamPosition">
+              <MappingFragment StoreEntitySet="teamPosition">
+                <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+                <ScalarProperty Name="seniorLifeguard" ColumnName="seniorLifeguard" />
+                <ScalarProperty Name="doctor" ColumnName="doctor" />
+                <ScalarProperty Name="paramedic" ColumnName="paramedic" />
+                <ScalarProperty Name="driver" ColumnName="driver" />
+                <ScalarProperty Name="pyrotechnist" ColumnName="pyrotechnist" />
+                <ScalarProperty Name="gasWelder" ColumnName="gasWelder" />
+                <ScalarProperty Name="craneOperator" ColumnName="craneOperator" />
+                <ScalarProperty Name="scubaDriver" ColumnName="scubaDriver" />
+                <ScalarProperty Name="hydraulicEquipmentTechnician" ColumnName="hydraulicEquipmentTechnician" />
+                <ScalarProperty Name="scout" ColumnName="scout" />
+                <ScalarProperty Name="electrician" ColumnName="electrician" />
+                <ScalarProperty Name="rescuer" ColumnName="rescuer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="PSOModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="idUser" ColumnName="idUser" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="family" ColumnName="family" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+                <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

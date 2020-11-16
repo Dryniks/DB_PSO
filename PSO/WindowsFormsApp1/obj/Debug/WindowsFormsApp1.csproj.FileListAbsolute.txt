@@ -1,0 +1,16 @@
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+D:\Курсач\PSO\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registration.resources
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Курсач\PSO\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
