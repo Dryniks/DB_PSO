@@ -59,6 +59,7 @@
             // 
             // AddDisasterButton
             // 
+            this.AddDisasterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddDisasterButton.ForeColor = System.Drawing.Color.White;
             this.AddDisasterButton.Location = new System.Drawing.Point(12, 282);
@@ -66,7 +67,7 @@
             this.AddDisasterButton.Size = new System.Drawing.Size(211, 53);
             this.AddDisasterButton.TabIndex = 37;
             this.AddDisasterButton.Text = "Добавить";
-            this.AddDisasterButton.UseVisualStyleBackColor = true;
+            this.AddDisasterButton.UseVisualStyleBackColor = false;
             this.AddDisasterButton.Click += new System.EventHandler(this.AddDisasterButtonClick);
             // 
             // DateText

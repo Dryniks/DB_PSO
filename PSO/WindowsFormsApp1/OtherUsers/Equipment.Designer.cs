@@ -41,7 +41,7 @@
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 12);
             this.ListInfo.Name = "ListInfo";
-            this.ListInfo.Size = new System.Drawing.Size(1014, 333);
+            this.ListInfo.Size = new System.Drawing.Size(1352, 333);
             this.ListInfo.TabIndex = 20;
             this.ListInfo.UseCompatibleStateImageBehavior = false;
             this.ListInfo.View = System.Windows.Forms.View.List;
@@ -51,7 +51,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(447, 368);
+            this.BackButton.Location = new System.Drawing.Point(616, 351);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(162, 70);
             this.BackButton.TabIndex = 19;
@@ -65,7 +65,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1038, 450);
+            this.ClientSize = new System.Drawing.Size(1370, 450);
             this.Controls.Add(this.ListInfo);
             this.Controls.Add(this.BackButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

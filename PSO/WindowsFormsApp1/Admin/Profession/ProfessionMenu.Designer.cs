@@ -41,7 +41,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(736, 275);
+            this.BackButton.Location = new System.Drawing.Point(1196, 278);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(162, 69);
             this.BackButton.TabIndex = 19;
@@ -57,7 +57,7 @@
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 12);
             this.ListInfo.Name = "ListInfo";
-            this.ListInfo.Size = new System.Drawing.Size(707, 333);
+            this.ListInfo.Size = new System.Drawing.Size(1178, 333);
             this.ListInfo.TabIndex = 18;
             this.ListInfo.UseCompatibleStateImageBehavior = false;
             this.ListInfo.View = System.Windows.Forms.View.List;
@@ -67,7 +67,7 @@
             this.DeleteProfessionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.DeleteProfessionButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteProfessionButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteProfessionButton.Location = new System.Drawing.Point(736, 188);
+            this.DeleteProfessionButton.Location = new System.Drawing.Point(1196, 191);
             this.DeleteProfessionButton.Name = "DeleteProfessionButton";
             this.DeleteProfessionButton.Size = new System.Drawing.Size(162, 69);
             this.DeleteProfessionButton.TabIndex = 17;
@@ -80,7 +80,7 @@
             this.AddProfessionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddProfessionButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddProfessionButton.ForeColor = System.Drawing.Color.White;
-            this.AddProfessionButton.Location = new System.Drawing.Point(736, 11);
+            this.AddProfessionButton.Location = new System.Drawing.Point(1196, 14);
             this.AddProfessionButton.Name = "AddProfessionButton";
             this.AddProfessionButton.Size = new System.Drawing.Size(162, 70);
             this.AddProfessionButton.TabIndex = 16;
@@ -93,7 +93,7 @@
             this.EditProfessionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditProfessionButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditProfessionButton.ForeColor = System.Drawing.Color.White;
-            this.EditProfessionButton.Location = new System.Drawing.Point(736, 96);
+            this.EditProfessionButton.Location = new System.Drawing.Point(1196, 99);
             this.EditProfessionButton.Name = "EditProfessionButton";
             this.EditProfessionButton.Size = new System.Drawing.Size(162, 77);
             this.EditProfessionButton.TabIndex = 15;
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(909, 355);
+            this.ClientSize = new System.Drawing.Size(1370, 355);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ListInfo);
             this.Controls.Add(this.DeleteProfessionButton);

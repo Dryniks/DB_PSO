@@ -5,16 +5,29 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSO_DB", "WindowsFormsApp1\PSO_DB.csproj", "{3642AB67-D73B-4762-8F55-4BFC33C77539}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report", "Report\Report.rptproj", "{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3642AB67-D73B-4762-8F55-4BFC33C77539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3642AB67-D73B-4762-8F55-4BFC33C77539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3642AB67-D73B-4762-8F55-4BFC33C77539}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{3642AB67-D73B-4762-8F55-4BFC33C77539}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
 		{3642AB67-D73B-4762-8F55-4BFC33C77539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3642AB67-D73B-4762-8F55-4BFC33C77539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Debug|Any CPU.ActiveCfg = Debug
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Debug|Any CPU.Build.0 = Debug
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Debug|Any CPU.Deploy.0 = Debug
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Release|Any CPU.ActiveCfg = Release
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Release|Any CPU.Build.0 = Release
+		{8F1DA983-78F2-4152-825A-3FD3A85BBBB7}.Release|Any CPU.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

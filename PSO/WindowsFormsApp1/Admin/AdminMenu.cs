@@ -54,7 +54,6 @@ namespace PSO_DB.Admin
                 _loginForm.Show();
             }
         }
-
         private void AdminMenuFormClosed(object sender, FormClosedEventArgs e)
         {
             _loginForm.Show();

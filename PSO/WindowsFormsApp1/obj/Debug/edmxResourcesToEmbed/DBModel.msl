@@ -138,6 +138,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOModel.GetDisasterData" FunctionImportName="GetDisasterData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.GetDisasterData_Result">
+          <ScalarProperty Name="idReason" ColumnName="idReason" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="typeReason" ColumnName="typeReason" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOModel.GetEquipmentData" FunctionImportName="GetEquipmentData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.GetEquipmentData_Result">
+          <ScalarProperty Name="idEquipment" ColumnName="idEquipment" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="equipmentName" ColumnName="equipmentName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionName="Хранилище PSOModel.GetPeopleData" FunctionImportName="GetPeopleData">
       <ResultMapping>
         <ComplexTypeMapping TypeName="PSOModel.GetPeopleData_Result">
@@ -152,5 +175,52 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOModel.GetTeamData" FunctionImportName="GetTeamData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.GetTeamData_Result">
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="seniorLifeguard" ColumnName="seniorLifeguard" />
+          <ScalarProperty Name="doctor" ColumnName="doctor" />
+          <ScalarProperty Name="paramedic" ColumnName="paramedic" />
+          <ScalarProperty Name="driver" ColumnName="driver" />
+          <ScalarProperty Name="pyrotechnist" ColumnName="pyrotechnist" />
+          <ScalarProperty Name="gasWelder" ColumnName="gasWelder" />
+          <ScalarProperty Name="craneOperator" ColumnName="craneOperator" />
+          <ScalarProperty Name="scubaDriver" ColumnName="scubaDriver" />
+          <ScalarProperty Name="hydraulicEquipmentTechnician" ColumnName="hydraulicEquipmentTechnician" />
+          <ScalarProperty Name="scout" ColumnName="scout" />
+          <ScalarProperty Name="electrician" ColumnName="electrician" />
+          <ScalarProperty Name="rescuer" ColumnName="rescuer" />
+          <ScalarProperty Name="regionAddress" ColumnName="regionAddress" />
+          <ScalarProperty Name="departmentAddress" ColumnName="departmentAddress" />
+          <ScalarProperty Name="mainDepartmentAddress" ColumnName="mainDepartmentAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище PSOModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище PSOModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище PSOModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище PSOModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище PSOModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище PSOModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище PSOModel.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

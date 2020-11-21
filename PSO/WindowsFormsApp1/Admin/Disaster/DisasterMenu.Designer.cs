@@ -41,7 +41,7 @@
             this.DeleteDisasterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.DeleteDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteDisasterButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteDisasterButton.Location = new System.Drawing.Point(736, 188);
+            this.DeleteDisasterButton.Location = new System.Drawing.Point(1196, 187);
             this.DeleteDisasterButton.Name = "DeleteDisasterButton";
             this.DeleteDisasterButton.Size = new System.Drawing.Size(162, 69);
             this.DeleteDisasterButton.TabIndex = 12;
@@ -54,7 +54,7 @@
             this.AddDisasterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddDisasterButton.ForeColor = System.Drawing.Color.White;
-            this.AddDisasterButton.Location = new System.Drawing.Point(736, 11);
+            this.AddDisasterButton.Location = new System.Drawing.Point(1196, 10);
             this.AddDisasterButton.Name = "AddDisasterButton";
             this.AddDisasterButton.Size = new System.Drawing.Size(162, 70);
             this.AddDisasterButton.TabIndex = 11;
@@ -67,7 +67,7 @@
             this.EditDisasterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditDisasterButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditDisasterButton.ForeColor = System.Drawing.Color.White;
-            this.EditDisasterButton.Location = new System.Drawing.Point(736, 96);
+            this.EditDisasterButton.Location = new System.Drawing.Point(1196, 95);
             this.EditDisasterButton.Name = "EditDisasterButton";
             this.EditDisasterButton.Size = new System.Drawing.Size(162, 77);
             this.EditDisasterButton.TabIndex = 10;
@@ -83,7 +83,7 @@
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 12);
             this.ListInfo.Name = "ListInfo";
-            this.ListInfo.Size = new System.Drawing.Size(707, 333);
+            this.ListInfo.Size = new System.Drawing.Size(1167, 333);
             this.ListInfo.TabIndex = 13;
             this.ListInfo.UseCompatibleStateImageBehavior = false;
             this.ListInfo.View = System.Windows.Forms.View.List;
@@ -93,7 +93,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(736, 275);
+            this.BackButton.Location = new System.Drawing.Point(1196, 274);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(162, 69);
             this.BackButton.TabIndex = 14;
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(910, 352);
+            this.ClientSize = new System.Drawing.Size(1370, 352);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ListInfo);
             this.Controls.Add(this.DeleteDisasterButton);

@@ -41,7 +41,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(901, 277);
+            this.BackButton.Location = new System.Drawing.Point(1196, 279);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(162, 69);
             this.BackButton.TabIndex = 24;
@@ -57,7 +57,7 @@
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 12);
             this.ListInfo.Name = "ListInfo";
-            this.ListInfo.Size = new System.Drawing.Size(871, 333);
+            this.ListInfo.Size = new System.Drawing.Size(1178, 333);
             this.ListInfo.TabIndex = 23;
             this.ListInfo.UseCompatibleStateImageBehavior = false;
             this.ListInfo.View = System.Windows.Forms.View.List;
@@ -67,7 +67,7 @@
             this.DeleteDepartmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.DeleteDepartmentButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteDepartmentButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteDepartmentButton.Location = new System.Drawing.Point(901, 190);
+            this.DeleteDepartmentButton.Location = new System.Drawing.Point(1196, 192);
             this.DeleteDepartmentButton.Name = "DeleteDepartmentButton";
             this.DeleteDepartmentButton.Size = new System.Drawing.Size(162, 69);
             this.DeleteDepartmentButton.TabIndex = 22;
@@ -80,7 +80,7 @@
             this.AddDepatrmetnButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddDepatrmetnButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddDepatrmetnButton.ForeColor = System.Drawing.Color.White;
-            this.AddDepatrmetnButton.Location = new System.Drawing.Point(901, 13);
+            this.AddDepatrmetnButton.Location = new System.Drawing.Point(1196, 15);
             this.AddDepatrmetnButton.Name = "AddDepatrmetnButton";
             this.AddDepatrmetnButton.Size = new System.Drawing.Size(162, 70);
             this.AddDepatrmetnButton.TabIndex = 21;
@@ -93,7 +93,7 @@
             this.EditDepartmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditDepartmentButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditDepartmentButton.ForeColor = System.Drawing.Color.White;
-            this.EditDepartmentButton.Location = new System.Drawing.Point(901, 98);
+            this.EditDepartmentButton.Location = new System.Drawing.Point(1196, 100);
             this.EditDepartmentButton.Name = "EditDepartmentButton";
             this.EditDepartmentButton.Size = new System.Drawing.Size(162, 77);
             this.EditDepartmentButton.TabIndex = 20;
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1075, 356);
+            this.ClientSize = new System.Drawing.Size(1370, 356);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ListInfo);
             this.Controls.Add(this.DeleteDepartmentButton);

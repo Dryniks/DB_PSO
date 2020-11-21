@@ -41,7 +41,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(736, 275);
+            this.BackButton.Location = new System.Drawing.Point(1196, 277);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(162, 69);
             this.BackButton.TabIndex = 19;
@@ -57,7 +57,7 @@
             this.ListInfo.HideSelection = false;
             this.ListInfo.Location = new System.Drawing.Point(12, 12);
             this.ListInfo.Name = "ListInfo";
-            this.ListInfo.Size = new System.Drawing.Size(707, 333);
+            this.ListInfo.Size = new System.Drawing.Size(1178, 333);
             this.ListInfo.TabIndex = 18;
             this.ListInfo.UseCompatibleStateImageBehavior = false;
             this.ListInfo.View = System.Windows.Forms.View.List;
@@ -67,7 +67,7 @@
             this.DeletePeopleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.DeletePeopleButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeletePeopleButton.ForeColor = System.Drawing.Color.White;
-            this.DeletePeopleButton.Location = new System.Drawing.Point(736, 188);
+            this.DeletePeopleButton.Location = new System.Drawing.Point(1196, 190);
             this.DeletePeopleButton.Name = "DeletePeopleButton";
             this.DeletePeopleButton.Size = new System.Drawing.Size(162, 69);
             this.DeletePeopleButton.TabIndex = 17;
@@ -80,7 +80,7 @@
             this.AddPeopeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddPeopeButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddPeopeButton.ForeColor = System.Drawing.Color.White;
-            this.AddPeopeButton.Location = new System.Drawing.Point(736, 11);
+            this.AddPeopeButton.Location = new System.Drawing.Point(1196, 13);
             this.AddPeopeButton.Name = "AddPeopeButton";
             this.AddPeopeButton.Size = new System.Drawing.Size(162, 70);
             this.AddPeopeButton.TabIndex = 16;
@@ -93,7 +93,7 @@
             this.EditPeopleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditPeopleButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditPeopleButton.ForeColor = System.Drawing.Color.White;
-            this.EditPeopleButton.Location = new System.Drawing.Point(736, 96);
+            this.EditPeopleButton.Location = new System.Drawing.Point(1196, 98);
             this.EditPeopleButton.Name = "EditPeopleButton";
             this.EditPeopleButton.Size = new System.Drawing.Size(162, 77);
             this.EditPeopleButton.TabIndex = 15;
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(906, 350);
+            this.ClientSize = new System.Drawing.Size(1370, 350);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ListInfo);
             this.Controls.Add(this.DeletePeopleButton);

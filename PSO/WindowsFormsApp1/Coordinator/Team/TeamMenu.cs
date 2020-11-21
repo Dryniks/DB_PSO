@@ -41,8 +41,7 @@ namespace WindowsFormsApp1.Coordinator.Team
                             FIO = user.idUser+"-"+ user.family + " " + user.name + " " + user.middleName
                         };
 
-
-            foreach (var user in users)
+      foreach (var user in users)
             {
                 switch (user.Profession)
                 {
@@ -52,7 +51,7 @@ namespace WindowsFormsApp1.Coordinator.Team
                     case "Доктор":
                         DoctorField.Items.Add(user.FIO);
                         break;
-                    case "Фельдешр":
+                    case "Фельдшер":
                         ParamedicField.Items.Add(user.FIO);
                         break;
                     case "Водитель":
@@ -61,13 +60,13 @@ namespace WindowsFormsApp1.Coordinator.Team
                     case "Пиротехник":
                         PyrotechnicField.Items.Add(user.FIO);
                         break;
-                    case "Газосварщик":
+                    case "Газовщик":
                         GasWelderField.Items.Add(user.FIO);
                         break;
                     case "Оператор крана":
                         CraneOperatorField.Items.Add(user.FIO);
                         break;
-                    case "Драйвер":
+                    case "Дайвер":
                         DiverField.Items.Add(user.FIO);
                         break;
                     case "Гидравлик":
@@ -79,7 +78,7 @@ namespace WindowsFormsApp1.Coordinator.Team
                     case "Электрик":
                         ElectricianField.Items.Add(user.FIO);
                         break;
-                    case "Заместитель гл спасателя":
+                    case "Зам гл. спасателя":
                         RescuerField.Items.Add(user.FIO);
                         break;
                 }
@@ -127,7 +126,7 @@ namespace WindowsFormsApp1.Coordinator.Team
                         case "Доктор":
                             InitResult(DoctorField, DoctorNoFoundText, DoctorResultText, user.FIO);
                             break;
-                        case "Фельдешр":
+                        case "Фельдшер":
                             InitResult(ParamedicField, ParamedicNoFoundText, ParamedicResultText, user.FIO);
                             break;
                         case "Водитель":
@@ -136,13 +135,13 @@ namespace WindowsFormsApp1.Coordinator.Team
                         case "Пиротехник":
                             InitResult(PyrotechnicField, PyrotechnicNoFoundText, PyrotechnicResultText, user.FIO);
                             break;
-                        case "Газосварщик":
+                        case "Газовщик":
                             InitResult(GasWelderField, GasWelderNoFoundText, GasWelderResultText, user.FIO);
                             break;
                         case "Оператор крана":
                             InitResult(CraneOperatorField, CraneOperatorNoFoundText, CraneOperatorResultText, user.FIO);
                             break;
-                        case "Драйвер":
+                        case "Дайвер":
                             InitResult(DiverField, DiverNoFoundText, DiverResultText, user.FIO);
                             break;
                         case "Гидравлик":
@@ -154,7 +153,7 @@ namespace WindowsFormsApp1.Coordinator.Team
                         case "Электрик":
                             InitResult(ElectricianField, ElectricianNoFoundText, ElectricianResultText, user.FIO);
                             break;
-                        case "Заместитель гл спасателя":
+                        case "Зам гл. спасателя":
                             InitResult(RescuerField, RescuerNoFoundText, RescuerResultText, user.FIO);
                             break;
                     }

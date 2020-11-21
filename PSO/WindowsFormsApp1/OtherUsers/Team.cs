@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.OtherUsers
                     case "Доктор":
                         DoctorResultText.Text = user.FIO;
                         break;
-                    case "Фельдешр":
+                    case "Фельдшер":
                         ParamedicResultText.Text = user.FIO;
                         break;
                     case "Водитель":
@@ -75,13 +75,13 @@ namespace WindowsFormsApp1.OtherUsers
                     case "Пиротехник":
                         PyrotechnicResultText.Text = user.FIO;
                         break;
-                    case "Газосварщик":
+                    case "Газовщик":
                         GasWelderResultText.Text = user.FIO;
                         break;
                     case "Оператор крана":
                         CraneOperatorResultText.Text = user.FIO;
                         break;
-                    case "Драйвер":
+                    case "Дайвер":
                         DiverResultText.Text = user.FIO;
                         break;
                     case "Гидравлик":
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1.OtherUsers
                     case "Электрик":
                         ElectricianResultText.Text = user.FIO;
                         break;
-                    case "Заместитель гл спасателя":
+                    case "Зам гл. спасателя":
                         RescuerResultText.Text = user.FIO;
                         break;
                 }

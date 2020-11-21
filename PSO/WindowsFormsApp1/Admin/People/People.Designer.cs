@@ -244,6 +244,7 @@
             // 
             // AddMissingPeopleButton
             // 
+            this.AddMissingPeopleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddMissingPeopleButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddMissingPeopleButton.ForeColor = System.Drawing.Color.White;
             this.AddMissingPeopleButton.Location = new System.Drawing.Point(12, 385);
@@ -251,7 +252,7 @@
             this.AddMissingPeopleButton.Size = new System.Drawing.Size(211, 53);
             this.AddMissingPeopleButton.TabIndex = 55;
             this.AddMissingPeopleButton.Text = "Добавить";
-            this.AddMissingPeopleButton.UseVisualStyleBackColor = true;
+            this.AddMissingPeopleButton.UseVisualStyleBackColor = false;
             this.AddMissingPeopleButton.Click += new System.EventHandler(this.AddMissingPeopleButtonClick);
             // 
             // People

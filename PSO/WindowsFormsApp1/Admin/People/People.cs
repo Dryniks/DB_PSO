@@ -28,10 +28,10 @@ namespace WindowsFormsApp1.Admin.People
             _deletedElementInListInfo = deletedElementInListInfo;
 
             DateOfBirthField.MaxDate = DateTime.Now;
-            DateOfBirthField.MinDate = DateTime.Now.AddYears(-1);
+            DateOfBirthField.MinDate = DateTime.Now.AddYears(-130);
 
             DateOfLossField.MaxDate = DateTime.Now;
-            DateOfLossField.MinDate = DateTime.Now.AddYears(-130);
+            DateOfLossField.MinDate = DateTime.Now.AddYears(-1);
 
             InitFields(people);
         }
