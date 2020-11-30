@@ -268,7 +268,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="GetDisasterData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <ReturnType>
       <CollectionType>
@@ -315,61 +314,6 @@
       </CollectionType>
     </ReturnType>
   </Function>
-  <Function Name="GetTeamData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="idTeam" Type="int" Nullable="false" />
-          <Property Name="teamName" Type="varchar" MaxLength="50" />
-          <Property Name="seniorLifeguard" Type="varchar" MaxLength="150" />
-          <Property Name="doctor" Type="varchar" MaxLength="150" />
-          <Property Name="paramedic" Type="varchar" MaxLength="150" />
-          <Property Name="driver" Type="varchar" MaxLength="150" />
-          <Property Name="pyrotechnist" Type="varchar" MaxLength="150" />
-          <Property Name="gasWelder" Type="varchar" MaxLength="150" />
-          <Property Name="craneOperator" Type="varchar" MaxLength="150" />
-          <Property Name="scubaDriver" Type="varchar" MaxLength="150" />
-          <Property Name="hydraulicEquipmentTechnician" Type="varchar" MaxLength="150" />
-          <Property Name="scout" Type="varchar" MaxLength="150" />
-          <Property Name="electrician" Type="varchar" MaxLength="150" />
-          <Property Name="rescuer" Type="varchar" MaxLength="150" />
-          <Property Name="regionAddress" Type="varchar" MaxLength="150" />
-          <Property Name="departmentAddress" Type="varchar" MaxLength="150" />
-          <Property Name="mainDepartmentAddress" Type="varchar" MaxLength="150" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="Хранилище PSOModelContainer">
     <EntitySet Name="coordinator" EntityType="Self.coordinator" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />

@@ -273,7 +273,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="GetDisasterData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <ReturnType>
             <CollectionType>
@@ -320,61 +319,6 @@
             </CollectionType>
           </ReturnType>
         </Function>
-        <Function Name="GetTeamData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <ReturnType>
-            <CollectionType>
-              <RowType>
-                <Property Name="idTeam" Type="int" Nullable="false" />
-                <Property Name="teamName" Type="varchar" MaxLength="50" />
-                <Property Name="seniorLifeguard" Type="varchar" MaxLength="150" />
-                <Property Name="doctor" Type="varchar" MaxLength="150" />
-                <Property Name="paramedic" Type="varchar" MaxLength="150" />
-                <Property Name="driver" Type="varchar" MaxLength="150" />
-                <Property Name="pyrotechnist" Type="varchar" MaxLength="150" />
-                <Property Name="gasWelder" Type="varchar" MaxLength="150" />
-                <Property Name="craneOperator" Type="varchar" MaxLength="150" />
-                <Property Name="scubaDriver" Type="varchar" MaxLength="150" />
-                <Property Name="hydraulicEquipmentTechnician" Type="varchar" MaxLength="150" />
-                <Property Name="scout" Type="varchar" MaxLength="150" />
-                <Property Name="electrician" Type="varchar" MaxLength="150" />
-                <Property Name="rescuer" Type="varchar" MaxLength="150" />
-                <Property Name="regionAddress" Type="varchar" MaxLength="150" />
-                <Property Name="departmentAddress" Type="varchar" MaxLength="150" />
-                <Property Name="mainDepartmentAddress" Type="varchar" MaxLength="150" />
-              </RowType>
-            </CollectionType>
-          </ReturnType>
-        </Function>
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="Хранилище PSOModelContainer">
           <EntitySet Name="coordinator" EntityType="Self.coordinator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
@@ -467,25 +411,6 @@
           <Property Name="dateOfLoss" Type="DateTime" />
           <Property Name="lastLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="specialSign" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-        </ComplexType>
-        <ComplexType Name="GetTeamData_Result">
-          <Property Name="idTeam" Type="Int32" Nullable="false" />
-          <Property Name="teamName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="seniorLifeguard" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="doctor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="paramedic" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="driver" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="pyrotechnist" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="gasWelder" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="craneOperator" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="scubaDriver" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="hydraulicEquipmentTechnician" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="scout" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="electrician" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="rescuer" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="regionAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="departmentAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="mainDepartmentAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </ComplexType>
         <EntityType Name="coordinator">
           <Key>
@@ -844,49 +769,7 @@
           <FunctionImport Name="GetDisasterData" IsComposable="true" ReturnType="Collection(PSOModel.GetDisasterData_Result)" />
           <FunctionImport Name="GetEquipmentData" IsComposable="true" ReturnType="Collection(PSOModel.GetEquipmentData_Result)" />
           <FunctionImport Name="GetPeopleData" IsComposable="true" ReturnType="Collection(PSOModel.GetPeopleData_Result)" />
-          <FunctionImport Name="GetTeamData" IsComposable="true" ReturnType="Collection(PSOModel.GetTeamData_Result)" />
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PSOModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PSOModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1067,53 +950,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionName="Хранилище PSOModel.GetTeamData" FunctionImportName="GetTeamData">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PSOModel.GetTeamData_Result">
-                <ScalarProperty Name="idTeam" ColumnName="idTeam" />
-                <ScalarProperty Name="teamName" ColumnName="teamName" />
-                <ScalarProperty Name="seniorLifeguard" ColumnName="seniorLifeguard" />
-                <ScalarProperty Name="doctor" ColumnName="doctor" />
-                <ScalarProperty Name="paramedic" ColumnName="paramedic" />
-                <ScalarProperty Name="driver" ColumnName="driver" />
-                <ScalarProperty Name="pyrotechnist" ColumnName="pyrotechnist" />
-                <ScalarProperty Name="gasWelder" ColumnName="gasWelder" />
-                <ScalarProperty Name="craneOperator" ColumnName="craneOperator" />
-                <ScalarProperty Name="scubaDriver" ColumnName="scubaDriver" />
-                <ScalarProperty Name="hydraulicEquipmentTechnician" ColumnName="hydraulicEquipmentTechnician" />
-                <ScalarProperty Name="scout" ColumnName="scout" />
-                <ScalarProperty Name="electrician" ColumnName="electrician" />
-                <ScalarProperty Name="rescuer" ColumnName="rescuer" />
-                <ScalarProperty Name="regionAddress" ColumnName="regionAddress" />
-                <ScalarProperty Name="departmentAddress" ColumnName="departmentAddress" />
-                <ScalarProperty Name="mainDepartmentAddress" ColumnName="mainDepartmentAddress" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище PSOModel.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище PSOModel.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище PSOModel.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище PSOModel.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PSOModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище PSOModel.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PSOModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище PSOModel.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище PSOModel.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

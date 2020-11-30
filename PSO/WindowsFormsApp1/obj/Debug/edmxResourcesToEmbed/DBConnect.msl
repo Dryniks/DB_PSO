@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PSOConnecctContainer" CdmEntityContainer="PSOConnects">
+    <EntitySetMapping Name="coordinator">
+      <EntityTypeMapping TypeName="PSOConnecct.coordinator">
+        <MappingFragment StoreEntitySet="coordinator">
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="department">
+      <EntityTypeMapping TypeName="PSOConnecct.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="idMainDepartment" ColumnName="idMainDepartment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disaster">
+      <EntityTypeMapping TypeName="PSOConnecct.disaster">
+        <MappingFragment StoreEntitySet="disaster">
+          <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="equipment">
+      <EntityTypeMapping TypeName="PSOConnecct.equipment">
+        <MappingFragment StoreEntitySet="equipment">
+          <ScalarProperty Name="idEquipment" ColumnName="idEquipment" />
+          <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+          <ScalarProperty Name="equipmentName" ColumnName="equipmentName" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mainDepartment">
+      <EntityTypeMapping TypeName="PSOConnecct.mainDepartment">
+        <MappingFragment StoreEntitySet="mainDepartment">
+          <ScalarProperty Name="idMainDepartment" ColumnName="idMainDepartment" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="missingPeople">
+      <EntityTypeMapping TypeName="PSOConnecct.missingPeople">
+        <MappingFragment StoreEntitySet="missingPeople">
+          <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+          <ScalarProperty Name="dateOfLoss" ColumnName="dateOfLoss" />
+          <ScalarProperty Name="lastLocation" ColumnName="lastLocation" />
+          <ScalarProperty Name="specialSign" ColumnName="specialSign" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="PSOConnecct.people">
+        <MappingFragment StoreEntitySet="people">
+          <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profession">
+      <EntityTypeMapping TypeName="PSOConnecct.profession">
+        <MappingFragment StoreEntitySet="profession">
+          <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reason">
+      <EntityTypeMapping TypeName="PSOConnecct.reason">
+        <MappingFragment StoreEntitySet="reason">
+          <ScalarProperty Name="idReason" ColumnName="idReason" />
+          <ScalarProperty Name="typeReason" ColumnName="typeReason" />
+          <ScalarProperty Name="reason1" ColumnName="reason" />
+          <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="region">
+      <EntityTypeMapping TypeName="PSOConnecct.region">
+        <MappingFragment StoreEntitySet="region">
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="team">
+      <EntityTypeMapping TypeName="PSOConnecct.team">
+        <MappingFragment StoreEntitySet="team">
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="idDisaster" ColumnName="idDisaster" />
+          <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teamPosition">
+      <EntityTypeMapping TypeName="PSOConnecct.teamPosition">
+        <MappingFragment StoreEntitySet="teamPosition">
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+          <ScalarProperty Name="seniorLifeguard" ColumnName="seniorLifeguard" />
+          <ScalarProperty Name="doctor" ColumnName="doctor" />
+          <ScalarProperty Name="paramedic" ColumnName="paramedic" />
+          <ScalarProperty Name="driver" ColumnName="driver" />
+          <ScalarProperty Name="pyrotechnist" ColumnName="pyrotechnist" />
+          <ScalarProperty Name="gasWelder" ColumnName="gasWelder" />
+          <ScalarProperty Name="craneOperator" ColumnName="craneOperator" />
+          <ScalarProperty Name="scubaDriver" ColumnName="scubaDriver" />
+          <ScalarProperty Name="hydraulicEquipmentTechnician" ColumnName="hydraulicEquipmentTechnician" />
+          <ScalarProperty Name="scout" ColumnName="scout" />
+          <ScalarProperty Name="electrician" ColumnName="electrician" />
+          <ScalarProperty Name="rescuer" ColumnName="rescuer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="PSOConnecct.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="idProfession" ColumnName="idProfession" />
+          <ScalarProperty Name="idTeam" ColumnName="idTeam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOConnecct.GetDisasterData" FunctionImportName="GetDisasterData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOConnecct.GetDisasterData_Result">
+          <ScalarProperty Name="idReason" ColumnName="idReason" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="typeReason" ColumnName="typeReason" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOConnecct.GetEquipmentData" FunctionImportName="GetEquipmentData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOConnecct.GetEquipmentData_Result">
+          <ScalarProperty Name="idEquipment" ColumnName="idEquipment" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="equipmentName" ColumnName="equipmentName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище PSOConnecct.GetPeopleData" FunctionImportName="GetPeopleData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PSOConnecct.GetPeopleData_Result">
+          <ScalarProperty Name="idPeople" ColumnName="idPeople" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="dateOfLoss" ColumnName="dateOfLoss" />
+          <ScalarProperty Name="lastLocation" ColumnName="lastLocation" />
+          <ScalarProperty Name="specialSign" ColumnName="specialSign" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

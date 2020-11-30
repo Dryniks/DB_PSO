@@ -157,11 +157,6 @@
     <Compile Include="Coordinator\Team\TeamMenu.Designer.cs">
       <DependentUpon>TeamMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBData.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,9 +188,6 @@
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GetPeopleData_Result.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamData_Result.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -265,12 +257,6 @@
     </Compile>
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="team.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
@@ -367,17 +353,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DBData.xsc">
-      <DependentUpon>DBData.xsd</DependentUpon>
-    </None>
-    <None Include="DBData.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBData.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DBData.xss">
-      <DependentUpon>DBData.xsd</DependentUpon>
-    </None>
     <None Include="DBModel.edmx.diagram">
       <DependentUpon>DBModel.edmx</DependentUpon>
     </None>
